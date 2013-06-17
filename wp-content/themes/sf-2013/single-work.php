@@ -43,7 +43,7 @@ the_post();
             </div>
             
             <div class="span4 right">
-                <a class="btn btn-primary btn-large" href="<?=site_url()?>#contact">Let's Get in Touch!</a>
+                <a class="btn btn-primary btn-large" href="<?=home_url()?>#contact">Let's Get in Touch!</a>
             </div>
         </div>
     </div>

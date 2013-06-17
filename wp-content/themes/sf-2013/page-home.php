@@ -1,14 +1,77 @@
-<?php get_header(); ?>
-    
-    <section class="spotlight" id="spotlight">
-        <div class="container">
-            <h2 class="leading">Hi, my name is</h2>
-            <h1 class="my-name">Sean Fisher</h1>
-            
-            <div class="me-shot"></div>
-        </div>
-    </section>
-    
+<?php get_header(); ?>    
+<section class="focus-area dark">
+	<div class="container">
+		<h2 class="leading">Hi, my name is <span>Sean Fisher</span></h2>
+		<p class="leading">I'm a full stack developer from New York City. My specilties including
+		WordPress, front and backend Development and custom application
+		development. I work with individuals and business to create amazing
+		internet applications. Let me help create your.</p>
+	</div>
+</section>
+
+<section class="focus-area">
+	<h2 class="leading">Where I've Worked</h2>
+	
+	<div class="container">
+		<div class="row">
+			<div class="span2">&nbsp;</div>
+			<div class="span4">
+				Item
+
+			</div>
+
+			<div class="span4">
+				Item
+
+			</div>
+			<div class="span2">&nbsp;</div>
+
+		</div>
+	</div>
+</section>
+
+<section class="focus-area dark">
+	<h2 class="leading">Working History</h2>
+	
+	<div class="container">
+		<div class="row">
+			<div class="span2">&nbsp;</div>
+			<div class="span4">
+				Item
+
+			</div>
+
+			<div class="span4">
+				Item
+
+			</div>
+			<div class="span2">&nbsp;</div>
+
+		</div>
+	</div>
+</section>
+
+<section class="focus-area">
+	<h2 class="leading">What have I been up to?</h2>
+	
+	<div class="container">
+		<div class="row">
+			<div class="span2">&nbsp;</div>
+			<div class="span4">
+				Item
+
+			</div>
+
+			<div class="span4">
+				Item
+
+			</div>
+			<div class="span2">&nbsp;</div>
+
+		</div>
+	</div>
+</section>
+
     <section class="below-spotlight">
         <div class="inner">
             <div class="container">
@@ -258,7 +321,7 @@
             </div>
             
                 <div class="span8">
-                    <h3>By Blog Writings <a href="<?=site_url('feed')?>" class="right"><i class="icon-star-empty"></i></a></h3>
+                    <h3>By Blog Writings <a href="<?=home_url('feed')?>" class="right"><i class="icon-star-empty"></i></a></h3>
                     
                     <ul class="tweets blog-posts">
                         <?php

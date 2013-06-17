@@ -10,23 +10,14 @@ body {
 }
 
 header {
-    background: whiteSmoke;
+    background: white;
     // border-top: 1px solid #888;
     padding: 0 0 10px;
-    border-bottom: 1px solid #888;
-    .box-shadow(0px 0px 16px -2px #888);
     position: fixed;
     top:0;
     width: 100%;
     z-index: 600;
-    
-        
-    #top-border {
-        @grad(#5187b1, darken(#5187b1, 10%));
-        height: 6px;
-        margin-bottom: 10px;
-        //border-bottom: 1px solid #333;
-    }
+    .box-shadow (0 -6px 20px rgba(0,0,0,0.2));
     
     div.site-logo {
         margin-top: 5px;
@@ -36,8 +27,8 @@ header {
             color: black;
             font-size: 30px;
             font-weight: bold;
-            letter-spacing: -1px;
-            
+            padding: 9px 0;
+
             &:hover img { .opacity(80); }
         }
     }
@@ -46,9 +37,9 @@ header {
         float: right;
         
         ul {
-            margin: 10px 0;
+            margin: 0;
             list-style: none;
-            .clearfix();
+            .clearfix ();
             
             li {
                 float: left;
@@ -60,7 +51,7 @@ header {
                 
                 a {
                     display: block;
-                    padding: 8px 14px;
+                    padding: 24px 14px;
                     font-size: 18px;
                     color: #777;
                     position: relative;
@@ -68,30 +59,6 @@ header {
                     &:hover {
                         color: #333;
                         text-decoration: none;
-                    }
-                }
-                
-                .arrow {
-                    display: none;
-                    
-                    border-color: #888 transparent transparent transparent;
-                    border-style: solid;
-                    border-width: 7px;
-                    bottom: -35px;
-                    height: 0;
-                    left: 24px;
-                    position: absolute;
-                    width: 0;
-                                        
-                    div.fill {
-                        border-color: whiteSmoke transparent transparent transparent;
-                        border-style: solid;
-                        border-width: 6px;
-                        height: 0;
-                        left: -6px;
-                        position: absolute;
-                        top: -8px;
-                        width: 0;
                     }
                 }
                 
@@ -109,33 +76,39 @@ header {
     
 } // Header
 
-section.spotlight {
-    padding: 60px 0 414px;
-    background: url('../img/texture.png') repeat #E8ECEF;
-    
-    h1.my-name {
-        text-align: center;
-        
-        font-size: 45px;
-        font-size: 85px;
-        line-height: 100px;
-        color: black;
-        font-family: 'Ubuntu', sans-serif;
-        
-        .text-shadow(0 1px 5px #ccc);
+// Typography
+h2.leading {
+    text-align: center;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 58px;
+    letter-spacing: -1px;
+    //font-family: 'Ubuntu', sans-serif;;
+    color: #333;
+
+    span {
+        background: yellow;
+        padding: 0 5px;
     }
-    
-    h2.leading {
-        text-align: center;
-        font-weight: 400;
-        font-size: 43px;
-        line-height: 58px;
-        letter-spacing: -1px;
-        font-family: 'Ubuntu', sans-serif;;
-        
-        color: #333;
+}
+
+p.leading {
+        color: #A0A0A0;
+        font-size: 18px;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        margin: 0 0 20px;
+        font-weight: 300;
     }
+
+section.focus-area {
+    padding: 100px 0;
     
+    &.dark { background: #F4F4F4; }
+    
+    p.leading { text-align: center; }
+
     div.me-shot {
         background: url('../img/me.png') no-repeat;
         height: 466px;
@@ -144,37 +117,6 @@ section.spotlight {
         position: absolute;
         z-index: 400;
         top: 740px;
-    }
-}
-
-section.below-spotlight {
-    background: white;
-    border-top: 1px solid #888;
-    border-bottom: 1px solid #888;
-    padding: 1px 0;
-    .box-shadow(0 3px 14px #333);
-    
-    position: relative;
-    z-index: 500;
-    text-align: center;
-    
-    div.inner {
-        width: 100%;
-        // background: #eee;
-        @grad(#EEE,#E1E1E1);
-        
-        padding: 30px 0;
-    }
-    
-    .text {
-        margin: 0;
-        .text-shadow(0 1px 0 white);
-        font-size: 23px;
-        
-        span.red {
-            color: #C2473D;
-            font-weight: bold;
-        }
     }
 }
 

@@ -1,70 +1,51 @@
 <?php
 /**
- * Sean Fisher 2012 WordPress Theme
+ * Sean Fisher 2013 WordPress Theme
  *
- * @author      Sean Fisher
+ * @author Sean Fisher
 **/
 
-// if (! is_user_logged_in() ) wp_die('We\'ll be back shortly.');
-
-// Less CSS
-// require_once(dirname(__FILE__).'/Less.php');
-
-define('sf_INC', dirname(__FILE__).'/inc/');
+define('SF_INC', dirname(__FILE__).'/inc/');
 
 // Init Hook
-function sf_init()
+add_action('init', function()
 {
-     require(__DIR__.'/vendor/autoload.php');
+    require(__DIR__.'/vendor/autoload.php');
 
     register_post_type( 'work',
-		array(
-			'labels' => array(
-				'name' => __( 'Work' ),
-				'singular_name' => __( 'Work' ),
-				'add_new'	=>	'Add Work',
-				'edit_item'	=>	'Edit Work',
-				'view_item'	=>	'View Work',
-				'search_items'	=>	'Search Work',
-				'add_new_item'	=>	'Add New Work',
-				'not_found'	=>	'No Work Found',
-			),
-		'rewrite'	=>	array(
+    array(
+        'labels' => array(
+            'name' => __( 'Work' ),
+            'singular_name' => __( 'Work' ),
+            'add_new'	=>	'Add Work',
+            'edit_item'	=>	'Edit Work',
+            'view_item'	=>	'View Work',
+            'search_items'	=>	'Search Work',
+            'add_new_item'	=>	'Add New Work',
+            'not_found'	=>	'No Work Found',
+        ),
+        
+        'rewrite'	=>	array(
             'slug'  => 'work',
         ),
-		//'query_var'               =>	false,
-		'public'                  => TRUE,
-		'show_ui'                 => TRUE,
-		'exclude_from_search'     => TRUE,
-		'has_archive'             => FALSE,
-		'supports'	=>	array('title'/** , 'thumbnail' **/,'revisions','editor',
-			),
-				/*'title'	=>	TRUE,
-				'editor'	=>	FALSE,
-				'author'	=>	FALSE,
-				'thumbnail'	=>	TRUE,
-				'excerpt'	=>	FALSE,
-				'trackbacks'	=>	FALSE,
-				'custom-fields'	=>	FALSE,
-				'comments'	=>	FALSE,
-				'revisions'	=>	TRUE,
-				'page-attributes'	=>	FALSE,
-				*/
-		
-		)
-	);
-}
-add_action('init', 'sf_init');
+        //'query_var'               =>	false,
+        'public'                  => TRUE,
+        'show_ui'                 => TRUE,
+        'exclude_from_search'     => TRUE,
+        'has_archive'             => FALSE,
+        'supports'	=>	array('title','revisions','editor'),
+    ));
+});
 
 /**
  * Setup the meta to have javscript load
  *
  * @access private
 **/
-function sf_setup_meta()
+add_action( 'admin_menu' , function()
 {	
-	add_meta_box('sf_js_box', 'Page\'s Javascript', 'sf_js_box', 'page', 'normal', 'core');
-	add_meta_box('sf_work_box', 'Work Information', function()
+    add_meta_box('sf_js_box', 'Page\'s Javascript', 'sf_js_box', 'page', 'normal', 'core');
+    add_meta_box('sf_work_box', 'Work Information', function()
 	{
         $image = $image_small = $work = $website = '';
         $weight = 10;
@@ -79,8 +60,7 @@ function sf_setup_meta()
         
         include(dirname(__FILE__).'/inc/work-meta-box.php');
     }, 'work', 'normal', 'core');
-}
-add_action( 'admin_menu' , 'sf_setup_meta' );
+});
 
 /**
  * Callback to the Admin's Meta Box
@@ -95,7 +75,7 @@ function sf_js_box()
     endif;
     
     // Trying to keep it neat, we have the Meta box in a seperate file
-    include (sf_INC.'admin/js-meta-box.php');
+    include (SF_INC.'admin/js-meta-box.php');
 }
 
 /**
@@ -103,7 +83,7 @@ function sf_js_box()
  *
  * @access  private
 **/
-function sf_save_post($post_id)
+add_action('save_post', function($post_id)
 {
     if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) 
         return $post_id;
@@ -137,8 +117,7 @@ function sf_save_post($post_id)
             return $post_id;
         break;
     }
-}
-add_action('save_post', 'sf_save_post');
+});
 
 /**
  * Setup our Scripts/Styles
@@ -154,7 +133,7 @@ function sf_enqueue()
     
     // Add our scripts
     wp_register_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.js', array(), '1.0');
-    wp_register_script( 'sf-2012', get_template_directory_uri().'/js/site.js', array(), '1.0');
+    wp_register_script( 'sf-2013', get_template_directory_uri().'/js/site.js', array(), '1.0');
     wp_register_script( 'jquery.transit', get_template_directory_uri().'/js/jquery.transit.js', array(), '1.0');
     wp_register_script( 'jquery.gridrotator', get_template_directory_uri().'/js/jquery.gridrotator.js', array(), '1.0');
     
@@ -163,20 +142,19 @@ function sf_enqueue()
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('jquery.transit');
     wp_enqueue_script('jquery.gridrotator');
-    wp_enqueue_script('sf-2012');
+    wp_enqueue_script('sf-2013');
     
     // Compile the LESS into CSS!
-    require_once(dirname(__FILE__).'/Less.php');
-    Less::init();
-    Less::compile('site');
+    $less = new lessc;
+    $less->checkedCompile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
     
     // CSS
     wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css');
-    wp_register_style('sf-2012', get_template_directory_uri().'/css/site.css');
+    wp_register_style('sf-2013', get_template_directory_uri().'/css/site.css');
     wp_register_style('jquery.gridrotator', get_template_directory_uri().'/css/grid/style.css');
     
     wp_enqueue_style('bootstrap');
-    wp_enqueue_style('sf-2012');
+    wp_enqueue_style('sf-2013');
     wp_enqueue_style('jquery.gridrotator');
 }
 add_action('wp_enqueue_scripts', 'sf_enqueue');
@@ -188,8 +166,9 @@ add_action('wp_enqueue_scripts', 'sf_enqueue');
 **/
 function sf_enqueue_admin()
 {
-    require_once(dirname(__FILE__).'/Less.php');
-    Less::init();
+    return;
+    $less = new lessc;
+    //$less->checkedCompile(__DIR__.'/less/admin')
     Less::compile('admin-area');
     
     wp_register_style('sf_admin', get_template_directory_uri().'/css/admin-area.css');
@@ -229,4 +208,3 @@ function twentyten_posted_on() {
 	);
 }
 endif;
-//add_action('admin_init', 'sf_enqueue_admin');

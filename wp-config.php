@@ -15,7 +15,11 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 // Custom Content Directory
 // ========================
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
+
+if (defined('WP_CLI') AND WP_CLI)
+	define( 'WP_CONTENT_URL', 'http://localhost/wp-content' );
+else
+	define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content' );
 
 define('AUTH_KEY',         'V.^{s(tc[6UTH97 -C:&>p9~9d(e3%y!|sbj%!?Eyh+`P56FVD[jAI[P-vl|rODL');
 define('SECURE_AUTH_KEY',  'q;,<OSA{*T7Vl~YpBW$+z-w|#*2gwd@`]rH7afbNB!zD-8$ R<TYaYFCNF:qX?U ');

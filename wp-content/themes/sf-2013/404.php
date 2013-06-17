@@ -8,7 +8,7 @@ get_header();
                 
                 <div class="content-wrap">
                     <p>&nbsp;</p>
-                    <p align="center">Still haven't found what you're looking for? Don't write a song about it &mdash; <a href="<?=site_url()?>">Let's go home!</a></p>
+                    <p align="center">Still haven't found what you're looking for? Don't write a song about it &mdash; <a href="<?=home_url()?>">Let's go home!</a></p>
                 </div>
             </article>
     </div>

@@ -31,22 +31,20 @@
 
 <body <?php body_class(); ?>>
     <header class="<?php if (is_front_page()) echo 'loading'; ?>">
-        <div id="top-border"></div>
-        
         <div class="container">
             <div class="row">
                 <div class="span3 site-logo">
-                    <a href="<?=site_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
+                    <a href="<?=home_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
                 </div>
                 
                 <div class="span9">
                     <nav id="site-nav-wrap">
                         <ul id="site-nav">
-                            <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=site_url('')?>" data-target="#spotlight">Home <div class="arrow"><div class="fill"></div></div></a></li>
-                            <li id="nav-about"><a href="<?=site_url('')?>#about" data-target="#about">About Me <div class="arrow"><div class="fill"></div></div></a></li>
-                            <li id="nav-work"><a href="<?=site_url('')?>#work" data-target="#work">Work Portfolio <div class="arrow"><div class="fill"></div></div></a></li>
-                            <li <?php if (get_the_title() == 'Blog' ) echo 'class="active"'; ?>><a href="<?=site_url('blog')?>">Blog <div class="arrow"><div class="fill"></div></div></a></li>
-                            <li id="nav-contact"><a href="<?=site_url('')?>#contact" data-target="#contact">Contact Me <div class="arrow"><div class="fill"></div></div></a></li>
+                            <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=home_url('')?>" data-target="#spotlight">Home</a></li>
+                            <li id="nav-about"><a href="<?=home_url('')?>#about" data-target="#about">About Me</a></li>
+                            <li id="nav-work"><a href="<?=home_url('')?>#work" data-target="#work">Work Portfolio</a></li>
+                            <li <?php if (get_the_title() == 'Blog' ) echo 'class="active"'; ?>><a href="<?=home_url('blog')?>">Blog</a></li>
+                            <li id="nav-contact"><a href="<?=home_url('')?>#contact" data-target="#contact">Contact Me</a></li>
                         </ul>
                     </nav>
                 </div>

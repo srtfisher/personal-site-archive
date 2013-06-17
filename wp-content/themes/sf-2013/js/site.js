@@ -5,23 +5,6 @@
 var SF = {};
 
 $(document).ready(function () {
-    
-    if (! $('.me-shot'))
-    {
-        $('header, section').show();
-    }
-    
-    // Loads at 701 - move to 325
-    $('.me-shot').delay(1500).animate({
-        top:    330,
-    }, 'slow', function()
-    {
-        // On complete
-        //$('header').delay(300).slideDown();
-        
-        //$('section').show();
-    });
-    
     $('form#contact-form').submit(function(e)
     {
         e.preventDefault();
