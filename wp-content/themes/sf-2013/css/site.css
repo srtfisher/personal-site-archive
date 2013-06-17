@@ -113,6 +113,7 @@ h2.leading {
   line-height: 58px;
   letter-spacing: -1px;
   color: #333;
+  margin-bottom: 20px;
 }
 h2.leading span {
   background: yellow;
@@ -132,6 +133,15 @@ section.focus-area {
 }
 section.focus-area.dark {
   background: #F4F4F4;
+}
+section.focus-area.super-dark {
+  background: #2980b9;
+}
+section.focus-area.super-dark h1,
+section.focus-area.super-dark h2,
+section.focus-area.super-dark h3,
+section.focus-area.super-dark h4 p {
+  color: white;
 }
 section.focus-area p.leading {
   text-align: center;
@@ -339,7 +349,6 @@ section.social ul.tweets.blog-posts li h5 {
 section.contact {
   padding: 30px 0;
   background: #f5f5f5;
-  border-bottom: 1px solid rgba(0,0,0,0.247059);
 }
 section.contact div.alert {
   -webkit-border-radius: 0;
@@ -448,7 +457,8 @@ section.single-work div.footer-container .btn.btn-primary:hover {
   background: #9d261d;
 }
 footer {
-  margin: 30px 0;
+  padding: 30px 0;
+  background: #1d2025;
   color: #666;
 }
 footer ul {

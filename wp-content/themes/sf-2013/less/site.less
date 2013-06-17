@@ -18,7 +18,7 @@ header {
     width: 100%;
     z-index: 600;
     .box-shadow (0 -6px 20px rgba(0,0,0,0.2));
-    
+
     div.site-logo {
         margin-top: 5px;
         
@@ -85,6 +85,7 @@ h2.leading {
     letter-spacing: -1px;
     //font-family: 'Ubuntu', sans-serif;;
     color: #333;
+    margin-bottom: 20px;
 
     span {
         background: yellow;
@@ -106,7 +107,11 @@ section.focus-area {
     padding: 100px 0;
     
     &.dark { background: #F4F4F4; }
-    
+    &.super-dark {
+        background: #2980b9;
+
+        h1, h2, h3, h4 p { color: white; }
+    }
     p.leading { text-align: center; }
 
     div.me-shot {
@@ -335,7 +340,6 @@ section.social {
 section.contact {
     padding: 30px 0;
     background: #f5f5f5;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.247059);
     
     div.alert {
         .border-radius (0);
@@ -466,8 +470,8 @@ section.single-work {
 }
 
 footer {
-    margin: 30px 0;
-    
+    padding: 30px 0;
+    background: #1d2025;
     color: #666;
     
     ul {
