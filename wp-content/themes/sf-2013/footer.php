@@ -4,13 +4,14 @@
     <div class="row">
         <div class="span6">
             <ul class="clearfix">
-                <li><a href="http://twitter.com/srtfisher/">@srtfisher on Twitter</a></li>
-                <li><a href="http://linkedin.com/in/srtfisher">LinkedIn</a></li>
+                <li><a href="http://twitter.com/srtfisher" target="_blank">Twitter</a></li>
+                <li><a href="http://linkedin.com/in/srtfisher" target="_blank">LinkedIn</a></li>
+                <li><a href="http://facebook.com/talking.with.sean" target="_blank">Facebook</a></li>
             </ul>
         </div>
         
         <div class="span5" style="text-align:right;">
-            &copy; 2008-<?=date('Y')?> Sean Fisher
+            &copy; <?=date('Y')?> <a href="<?php echo home_url(); ?>">Sean Fisher</a>
         </div>
     </div>
     

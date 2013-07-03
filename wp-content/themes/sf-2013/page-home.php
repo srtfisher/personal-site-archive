@@ -60,6 +60,8 @@ Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet
 
 
 		</div>
+
+		<div class="resume-link"><p>How about a paper <a href="<?php echo home_url('resume'); ?>">resume</a>?</p></div>
 	</div>
 </section>
 

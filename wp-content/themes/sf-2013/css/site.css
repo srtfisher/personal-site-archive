@@ -191,6 +191,14 @@ section.what-i-work-on h2.leading span {
   border-bottom: 3px solid rgba(255,255,255,0.5);
   padding-bottom: 4px;
 }
+section.what-i-work-on .resume-link {
+  margin: 30px 0 -30px;
+  color: #DADADA;
+  text-align: center;
+}
+section.what-i-work-on .resume-link a {
+  color: white;
+}
 section.what-i-work-on .service-item {
   text-align: center;
 }
@@ -510,8 +518,14 @@ section.single-work div.footer-container .btn.btn-primary:hover {
 }
 footer {
   padding: 30px 0;
-  background: #1d2025;
   color: #666;
+}
+footer a {
+  color: #7B8991;
+}
+footer a:hover {
+  color: #3E4549;
+  text-decoration: none;
 }
 footer ul {
   list-style: none;
@@ -525,13 +539,7 @@ footer ul li:last-child a {
 }
 footer ul li a {
   display: block;
-  border-right: 1px solid #eee;
   padding: 5px 10px;
-  color: #08c;
-}
-footer ul li a:hover {
-  color: #005580;
-  text-decoration: none;
 }
 footer div.final-quote {
   margin: 40px 0 20px;

@@ -171,6 +171,17 @@ section.what-i-work-on {
         }
     }
 
+    .resume-link {
+        margin: 30px 0 -30px;
+        color: #DADADA;
+
+        text-align: center;
+
+        a {
+            color: white;
+        }
+    }
+
     .service-item {
         text-align: center;
 
@@ -536,9 +547,16 @@ section.single-work {
 
 footer {
     padding: 30px 0;
-    background: #1d2025;
     color: #666;
     
+    a {
+        color: #7B8991;
+        
+        &:hover {
+            color: #3E4549;
+            text-decoration: none;
+        }
+    }
     ul {
         list-style: none; margin: 0;
         
@@ -548,14 +566,8 @@ footer {
             &:last-child a { border-right: none; }
             a {
                 display: block;
-                border-right: 1px solid #eee;
                 padding: 5px 10px;
-                color: @linkColor;
                 
-                &:hover {
-                    color: @linkColorHover;
-                    text-decoration: none;
-                }
             }
         }
     }
