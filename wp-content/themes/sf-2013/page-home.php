@@ -1,7 +1,7 @@
 <?php get_header(); ?>    
 <section class="focus-area dark">
 	<div class="container">
-		<h2 class="leading">Hi, my name is <span>Sean Fisher</span></h2>
+		<h2 class="leading">Hi, my name is <span class="yellow">Sean Fisher</span></h2>
 		<p class="leading">I'm a full stack developer from New York City. My specilties including
 		WordPress, front and backend Development and custom application
 		development. I work with individuals and business to create amazing
@@ -9,43 +9,55 @@
 	</div>
 </section>
 
-<section class="focus-area">
-	<h2 class="leading">Where I've Worked</h2>
+<section class="focus-area portfolio-listing">
+	<h2 class="leading">Look at Some of My Work</h2>
 	
 	<div class="container">
 		<div class="row">
-			<div class="span2">&nbsp;</div>
-			<div class="span4">
-				Item
+		<?php $cellCount = 0; for ($i = 0; $i < 8; $i++) : $cellCount++; ?>
+			<?php if ($i > 0 AND ($i % 2) == 0) : ?>
+				</div><div class="row">
+			<?php $cellCount = 0;
+			endif; ?>
+			<div class="span6">
+				<a href="#">
+					<img src="http://placehold.it/460x200" />
 
+					<h3>Great Content Site I Worked On</h3>
+					<h5>google.com</h5>
+				</a>
 			</div>
-
-			<div class="span4">
-				Item
-
-			</div>
-			<div class="span2">&nbsp;</div>
-
+		<?php endfor; ?>
 		</div>
 	</div>
 </section>
 
-<section class="focus-area dark">
-	<h2 class="leading">Working History</h2>
+<section class="focus-area what-i-work-on">
+	<h2 class="leading"><span>What can I provide you?</h2>
 	
 	<div class="container">
 		<div class="row">
-			<div class="span2">&nbsp;</div>
-			<div class="span4">
-				Item
-
+			<div class="span4 service-item">
+				<h3>Full Stack Design</h3>
+				<p>
+Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
+</p>
 			</div>
 
-			<div class="span4">
-				Item
-
+			<div class="span4 service-item">
+				<h3>Full Stack Design</h3>
+				<p>
+Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
+</p>
 			</div>
-			<div class="span2">&nbsp;</div>
+
+			<div class="span4 service-item">
+				<h3>Full Stack Design</h3>
+				<p>
+Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
+</p>
+			</div>
+
 
 		</div>
 	</div>
