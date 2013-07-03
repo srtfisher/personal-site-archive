@@ -6,12 +6,11 @@
 **/
 
 define('SF_INC', dirname(__FILE__).'/inc/');
+require(__DIR__.'/vendor/autoload.php');
 
 // Init Hook
 add_action('init', function()
 {
-    require(__DIR__.'/vendor/autoload.php');
-
     register_post_type( 'work',
     array(
         'labels' => array(
