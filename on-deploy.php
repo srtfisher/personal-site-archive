@@ -4,8 +4,8 @@
  */
 
 // Load WordPress
-require_once (__DIR__.'/wp/wp-load.php');
-require_once(  __DIR__ . '/wp/wp-admin/includes/plugin.php');
+require_once (__DIR__.'/wordpress/wp-load.php');
+require_once(  __DIR__ . '/wordpress/wp-admin/includes/plugin.php');
 
 $plugins = [
 	'akismet/akismet.php',
