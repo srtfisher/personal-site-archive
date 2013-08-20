@@ -38,7 +38,7 @@ if (!defined('WP_DEBUG')) define('WP_DEBUG', false);
 
 
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/wp/');
+	define('ABSPATH', dirname(__FILE__) . '/wordpress/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
