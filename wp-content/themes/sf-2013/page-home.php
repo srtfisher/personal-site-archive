@@ -38,9 +38,9 @@
 				</div><div class="row">
 			<?php $cellCount = 0;
 			endif; ?>
-			<div class="span6">
+			<div class="col-lg-6 col-md-6 col-sm-6">
 				<a href="#">
-					<img src="http://placehold.it/460x200" />
+					<img src="http://placehold.it/460x200" style="max-width:100%;" />
 
 					<h3>Great Content Site I Worked On</h3>
 					<h5>google.com</h5>
@@ -56,21 +56,21 @@
 	
 	<div class="container">
 		<div class="row">
-			<div class="span4 service-item">
+			<div class="col-lg-4 col-md-4 col-sm-4 service-item">
 				<h3>Full Stack Design</h3>
 				<p>
 Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
 </p>
 			</div>
 
-			<div class="span4 service-item">
+			<div class="col-lg-4 col-md-4 col-sm-4 service-item">
 				<h3>Full Stack Design</h3>
 				<p>
 Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
 </p>
 			</div>
 
-			<div class="span4 service-item">
+			<div class="col-lg-4 col-md-4 col-sm-4 service-item">
 				<h3>Full Stack Design</h3>
 				<p>
 Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
@@ -183,25 +183,25 @@ Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet
     
     <section class="contact" id="contact">
         <div class="container">
-            <h3 class="section-title">Like what you see?</h3>
+            <h3 class="section-title">Let's get in touch.</h3>
             <h4 class="section-sub">We should be in touch. Shoot Sean an email below and he'll get back to you within <strong class="tipsy" title="That is, of course, if I'm not away on a much needed vacation!">one day</strong>.</h4>
             
             <div class="row">
             <form action="/contact" method="POST" id="contact-form" enctype="multipart/form-data">
                 
-                <div class="span6">
-                    <textarea name="content" id="contact-textarea" placeholder="What's on your mind?"></textarea>
+                <div class="col-lg-6 col-md-6">
+                    <textarea name="content" id="contact-textarea" placeholder="What's on your mind?" class="form-control"></textarea>
                 </div>
 
-                <div class="span6">
-                    <input type="text" name="subject" class="subject" placeholder="What will we be talking about?" />
+                <div class="col-lg-6 col-md-6">
+                    <input type="text" name="subject" class="form-control subject" placeholder="What will we be talking about?" />
 
-                    <input type="text" name="your-name" placeholder="What's your name?" class="name" />
+                    <input type="text" name="your-name" placeholder="What's your name?" class="form-control name" />
 
-                    <input type="email" name="your-email" placeholder="What is your email address?" class="email" />
+                    <input type="email" name="your-email" placeholder="What is your email address?" class="form-control email" />
 
                         <button type="submit" class="btn btn-large btn-primary btn-block" id="contact-btn"
-                    data-placement="right" data-content="I will not help wire money to your account, need SEO services, or want to rule the world. Thank you!"
+                    data-placement="top" data-content="I will not help wire money to your account, need SEO services, or want to rule the world. Thank you!"
                     data-title="Before you waste your time!" data-trigger="hover">Send Your Message</button>
                 </div>
                 

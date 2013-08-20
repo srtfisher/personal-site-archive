@@ -14,11 +14,6 @@
             &copy; <?=date('Y')?> <a href="<?php echo home_url(); ?>">Sean Fisher</a>
         </div>
     </div>
-    
-    <div class="final-quote">
-        <p>A man should look for what is, and not for what he thinks should be.</p>
-        <cite>Albert Einstein</cite>
-    </div>
 </div>
 </footer>
 

@@ -40,6 +40,13 @@ body a {
   -o-transition: .25s;
   transition: .25s;
 }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Open Sans', sans-serif;
+}
 header {
   background: white;
   padding: 20px 0;
@@ -396,9 +403,9 @@ section.social ul.tweets.blog-posts li h5 {
 }
 .section-title {
   text-align: center;
-  font-size: 35px;
   line-height: 50px;
-  font-weight: 500;
+  font-weight: bold;
+  font-size: 32px;
   margin: 0 0 15px;
 }
 .section-sub {
@@ -407,7 +414,7 @@ section.social ul.tweets.blog-posts li h5 {
   margin: 0 0 20px;
 }
 section.contact {
-  padding: 30px 0;
+  padding: 50px 0;
   background: #f5f5f5;
 }
 section.contact div.alert {
@@ -431,27 +438,26 @@ section.contact form textarea {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  width: 426px;
+  width: 100%;
+  height: 239px;
   padding: 18px;
 }
 section.contact form input.subject,
 section.contact form input.email,
 section.contact form input.name {
   padding: 14px;
-  width: 434px;
+  width: 100%;
   font-size: 14px;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   margin-bottom: 14px;
+  height: auto;
 }
 section.contact form button {
-  background: #04C;
   font-size: 18px;
   line-height: 25px;
-}
-section.contact form button:hover {
-  background: #0055ff;
+  padding: 10px 12px;
 }
 section.single-work div.container {
   width: 820px;
@@ -518,13 +524,14 @@ section.single-work div.footer-container .btn.btn-primary:hover {
 }
 footer {
   padding: 30px 0;
-  color: #666;
+  color: #f2f2f2;
+  background: #464f4e;
 }
 footer a {
-  color: #7B8991;
+  color: #e6e6e6;
 }
 footer a:hover {
-  color: #3E4549;
+  color: #cccccc;
   text-decoration: none;
 }
 footer ul {
@@ -540,23 +547,6 @@ footer ul li:last-child a {
 footer ul li a {
   display: block;
   padding: 5px 10px;
-}
-footer div.final-quote {
-  margin: 40px 0 20px;
-}
-footer div.final-quote p {
-  font-family: 'Kotta One', serif;
-  text-align: center;
-  font-size: 18px;
-  -webkit-text-shadow: 0 1px 0 white;
-  -moz-text-shadow: 0 1px 0 white;
-  text-shadow: 0 1px 0 white;
-  color: #777;
-}
-footer div.final-quote cite {
-  text-align: center;
-  display: block;
-  color: #999;
 }
 section.blog {
   padding-top: 40px;

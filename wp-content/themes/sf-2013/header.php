@@ -25,7 +25,7 @@
 		wp_enqueue_script('comment-reply');
 	wp_head();
 ?>
-    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700|Kotta+One" rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cutive|Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -33,11 +33,11 @@
     <header class="<?php if (is_front_page()) echo 'loading'; ?>">
         <div class="container">
             <div class="row">
-                <div class="span3 site-logo">
+                <div class="col-lg-3 col-md-3 site-logo">
                     <a href="<?=home_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
                 </div>
                 
-                <div class="span9">
+                <div class="col-lg-9 col-md-9">
                     <nav id="site-nav-wrap">
                         <ul id="site-nav">
                             <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=home_url('')?>" data-target="#spotlight">Home</a></li>
