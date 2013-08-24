@@ -55,6 +55,8 @@
 		<?php endfor; ?>
 		</div>
 	</div>
+
+    <p class="last-call">I also have a number of <a href="<?php echo home_url('open-source'); ?>" class="btn btn-default">open source projects</a>.</p>
 </section>
 
 <section class="focus-area what-i-work-on">
