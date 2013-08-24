@@ -20,11 +20,15 @@ endif;
     <div class="container">
         <?php if (have_posts()) : while(have_posts() ) : the_post(); ?>
             <article>
-                <h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                
-                <?php if (! is_single() AND ! is_page()) : ?>
-                    <h4 class="article-meta"><?php twentyten_posted_on(); ?></h4>
-                <?php endif; ?>
+                <div class="post-title-wrap">
+                    <h<?php if (is_single() OR is_page()) echo 2; else echo 4; ?> class="post-title">
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h<?php if (is_single() OR is_page()) echo 2; else echo 4; ?>>
+                    
+                    <?php if ( is_single() OR is_page()) : ?>
+                        <h4 class="post-meta"><?php twentyten_posted_on(); ?></h4>
+                    <?php endif; ?>
+                </div>
                 
                 <div class="content-wrap">
                     <?php the_content(); ?>

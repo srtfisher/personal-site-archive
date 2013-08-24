@@ -145,9 +145,9 @@ function sf_enqueue()
     
     // Compile the LESS into CSS!
     $less = new lessc;
-    $less->checkedCompile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
+    $less->compileFile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
     
-    // CSS
+    // CSS -- checkedCompile
     wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css');
     wp_register_style('sf-2013', get_template_directory_uri().'/css/site.css');
     wp_register_style('jquery.gridrotator', get_template_directory_uri().'/css/grid/style.css');
@@ -155,6 +155,10 @@ function sf_enqueue()
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('sf-2013');
     wp_enqueue_style('jquery.gridrotator');
+
+    wp_register_style('syntaxhighlighter-theme-journeys', get_template_directory_uri().'/css/syntax.css',
+        array( 'syntaxhighlighter-core' ), '1.2.3'
+    );
 }
 add_action('wp_enqueue_scripts', 'sf_enqueue');
 
@@ -207,3 +211,10 @@ function twentyten_posted_on() {
 	);
 }
 endif;
+
+
+add_filter('syntaxhighlighter_themes', function($themes)
+{
+    $themes['journeys'] = __( 'Journeys',      'journeys' );
+    return $themes;
+});

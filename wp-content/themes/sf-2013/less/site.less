@@ -1,4 +1,7 @@
-@import 'func.less';
+@import 'variables.less';
+@import 'mixins.less';
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
 @fontserif: 'Cutive', serif;
 @fontsans: 'Open Sans', sans-serif;
 
@@ -600,29 +603,6 @@ section.blog {
     article {
         margin-bottom: 40px;
         .clearfix();
-        
-        .article-title {
-            margin: 0;
-            
-            a {
-                color: black;
-                font-family: 'Ubuntu', sans-serif;
-                font-weight: 500;
-                font-size: 35px;
-                
-                &:hover {
-                    color: @red;
-                    text-decoration: none;
-                }
-            }
-			
-			&.four-oh-four-title {
-	            color: black;
-	            font-family: 'Ubuntu', sans-serif;
-	            font-weight: 500;
-	            font-size: 50px;
-	        }
-        }
 		
         .article-meta {
             font-size: 12px;
@@ -653,6 +633,38 @@ section.blog {
             }
         }
         
+        .post-title-wrap {
+            border-bottom: 1px solid darken(#eeeeee, 10%);
+            padding: 18px 0;
+
+            .post-title {
+                font-size: 36px;
+                line-height: 1em;
+                color: black;
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        color: lighten(black, 20%);
+                        .transition (.25s);
+                        text-decoration: none;
+                    }
+                }
+            }
+            .post-meta {
+                font-weight: normal;
+                color: #9B9B9B;
+                font-size: 13px;
+                line-height: 15px;
+                margin: 0 0 10px;
+
+                a {
+                    color: darken(#9B9B9B, 25%);
+                }
+            }
+        }
+
         .content-wrap {
             @import 'posting.less';
             
@@ -812,7 +824,7 @@ section.blog {
      
      section.contact form {
           width: auto;
-          .clearfix();
+          .clearfix ();
           
           input, textarea {
                float: left;
