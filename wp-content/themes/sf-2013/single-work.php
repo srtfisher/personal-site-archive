@@ -20,14 +20,14 @@ the_post();
         <hr />
         
         <div class="row">
-            <div class="span7 work-featured">
+            <div class="col-lg-9 col-md-9 col-sm-9 work-featured">
                 <h2><?php the_title(); ?></h2>
                 <h4><a href="<?=$url?>"><?=$domain?></a></h4>
                 <?php the_content(); ?>
             </div>
             
-            <div class="span3 work-sidebar right">
-                <h4>Work Done</h4>
+            <div class="col-lg-3 col-md-3 col-sm-3 work-sidebar">
+                <h4>Work Performed</h4>
                 <?php
                 echo wpautop(get_post_meta(get_the_ID(), 'sf-work', TRUE));
                 ?>
@@ -37,12 +37,12 @@ the_post();
     
     <div class="container footer-container">
         <div class="row">
-            <div class="span5">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <h3>Like what you see?</h3>
                 <p class="lead">I enjoy building amazing products and I would love to work with you.</p>
             </div>
             
-            <div class="span4 right">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-lg-push-2 col-md-push-2 col-sm-push-2">
                 <a class="btn btn-primary btn-large" href="<?=home_url()?>#contact">Let's Get in Touch!</a>
             </div>
         </div>
