@@ -5,6 +5,12 @@
 @fontserif: 'Cutive', serif;
 @fontsans: 'Open Sans', sans-serif;
 
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
 body {
     padding-top: 81px;
     font:14px/1.5 'Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -120,7 +126,7 @@ section.focus-area {
 
         h1, h2, h3, h4 p { color: white; }
     }
-    p.leading { text-align: center; }
+    p.leading { text-align: center; font-family: @fontsans; }
 
     div.me-shot {
         background: url('../img/me.png') no-repeat;
@@ -130,6 +136,11 @@ section.focus-area {
         position: absolute;
         z-index: 400;
         top: 740px;
+    }
+
+    .action-btns {
+        text-align: center;
+        margin: 50px 0 0;
     }
 }
 
@@ -898,4 +909,13 @@ section.blog {
                text-align: center !important;
           }
      }
+}
+
+
+.share-it {
+    border-top: 1px solid #DDD;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+    background: rgba(100, 100, 100, 0.04);
 }
