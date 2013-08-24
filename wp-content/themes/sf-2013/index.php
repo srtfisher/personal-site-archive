@@ -30,12 +30,16 @@ endif;
                     <?php endif; ?>
                 </div>
                 
+                <?php if (is_single() OR is_page()) : ?>
                 <div class="content-wrap">
                     <?php the_content(); ?>
                 </div>
+                <?php else : ?>
+                <div class="content-wrap"><?php the_excerpt(); ?></div>
+                <?php endif; ?>
                 
                 <?php if (! is_single() AND ! is_page()) : ?>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-primary btn-permalink right">Permalink &rarr;</a>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-primary right">Read More &rarr;</a>
                 <?php endif; ?>
             </article>
         <?php endwhile; endif; ?>
