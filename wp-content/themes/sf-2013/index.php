@@ -1,13 +1,5 @@
 <?php
-/**
- * Template Name: Work Template
- *
-**/
-
 get_header();
-
-$url = get_post_meta(get_the_ID(), 'sf-website', TRUE);
-$domain = parse_url($url, PHP_URL_HOST);
 
 if (is_page()) :
 #    query_posts(array(
