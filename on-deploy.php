@@ -16,7 +16,8 @@ $plugins = [
 	'all-in-one-seo-pack/all_in_one_seo_pack.php',
 	'disable-wordpress-plugin-updates/disable-plugin-updates.php',
 	'mp6/mp6.php',
-	'wp-pagenavi/wp-pagenavi.php'
+	'wp-pagenavi/wp-pagenavi.php',
+	'syntaxhighlighter/syntaxhighlighter.php',
 ];
 
 $plugin_path = __DIR__.'/wp-content/plugins/';

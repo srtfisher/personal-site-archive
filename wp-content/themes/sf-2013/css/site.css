@@ -524,14 +524,14 @@ section.single-work div.footer-container .btn.btn-primary:hover {
 }
 footer {
   padding: 30px 0;
-  color: #f2f2f2;
-  background: #464f4e;
+  color: #808080;
+  background: #F5F5F5;
 }
 footer a {
-  color: #e6e6e6;
+  color: #595959;
 }
 footer a:hover {
-  color: #cccccc;
+  color: #333;
   text-decoration: none;
 }
 footer ul {
@@ -618,93 +618,98 @@ section.blog article .btn-permalink:active {
   top: 2px;
 }
 section.blog article .content-wrap {
+  margin-top: 20px;
+  font-family: 'Cutive', serif;
   *zoom: 1;
 }
-section.blog article .content-wrap #wpstats {
-  width: 0px;
-  height: 0px;
-  overflow: hidden;
+section.blog article .content-wrap p {
+  margin: 0 0 1em;
+  font-size: 16px;
+  line-height: 30px;
+  color: #222;
 }
-section.blog article .content-wrap .wp-caption {
-  text-align: center;
-  background: #fff;
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 4px;
-  margin-bottom: 1em;
+section.blog article .content-wrap p.lead {
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
 }
-section.blog article .content-wrap .wp-caption-text {
-  font-size: 11px;
-  text-align: center;
-  margin: 0;
-  padding: 6px 3px 2px;
+section.blog article .content-wrap h1,
+section.blog article .content-wrap h2,
+section.blog article .content-wrap h3 {
+  font-weight: 500;
+  margin: 15px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+section.blog article .content-wrap h1 {
+  font-size: 30px;
+  line-height: 31px;
+}
+section.blog article .content-wrap h2 {
+  font-size: 27px;
+  line-height: 28px;
+}
+section.blog article .content-wrap h3 {
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: normal;
+}
+section.blog article .content-wrap h4 {
+  font-size: 21px;
+  line-height: 22px;
+  font-family: 'Open Sans', sans-serif;
+}
+section.blog article .content-wrap h5 {
+  font-size: 18px;
+  line-height: 19px;
+  font-family: 'Open Sans', sans-serif;
+}
+section.blog article .content-wrap h6 {
+  font-size: 15px;
   line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
 }
-section.blog article .content-wrap .wp-caption img {
+section.blog article .content-wrap a {
+  color: #0071BA;
+  text-decoration: underline;
+}
+section.blog article .content-wrap a:hover {
+  color: #005287;
+  text-decoration: none;
+}
+section.blog article .content-wrap img {
+  max-width: 100%;
+}
+section.blog article .content-wrap blockquote {
+  padding: 10px 0 10px 30px;
+}
+section.blog article .content-wrap blockquote p {
   margin: 0;
-  padding: 0;
-  border: 0 none;
-  margin-top: 5px;
 }
-section.blog article .content-wrap .wp-caption-dd {
-  font-size: 11px;
-  line-height: 17px;
-  padding: 0 4px 5px;
-  margin: 0;
+section.blog article .content-wrap blockquote cite {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 500;
 }
-section.blog article .content-wrap .aligncenter,
-section.blog article .content-wrap .alignnone {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+section.blog article .content-wrap pre,
+section.blog article .content-wrap .syntaxhighlighter {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-top: none;
+  border-right: none;
+  background-color: #f5f5f5 !important;
+  border-bottom: none;
+  border-left: 1px solid rgba(0,0,0,0.15);
+  padding: 10px 10px 10px 20px;
+  margin: 0 0 20px;
 }
-section.blog article .content-wrap .center,
-section.blog article .content-wrap .textcenter {
-  text-align: center;
-}
-section.blog article .content-wrap .textleft {
-  text-align: left;
-}
-section.blog article .content-wrap .textright {
-  text-align: right;
-}
-section.blog article .content-wrap .block {
-  display: block;
-}
-section.blog article .content-wrap img.center,
-section.blog article .content-wrap img[align="center"] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-section.blog article .content-wrap img.left,
-section.blog article .content-wrap img[align="left"] {
-  float: left;
-  margin: 2px 10px 5px 0px;
-}
-section.blog article .content-wrap img.right,
-section.blog article .content-wrap img[align="right"] {
-  float: right;
-  margin: 2px 0px 5px 10px;
-}
-section.blog article .content-wrap .alignleft {
-  float: left;
-  width: auto;
-  margin: 5px 15px 5px 0;
-}
-section.blog article .content-wrap .alignright {
-  float: right;
-  width: auto;
-  margin: 5px 0 5px 15px;
-}
-section.blog article .content-wrap .aligncenter {
-  text-align: center;
-  margin-bottom: 15px;
-}
-section.blog article .content-wrap img.aligncenter {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+section.blog article .content-wrap .syntaxhighlighter {
+  padding-left: 0;
 }
 section.blog article .content-wrap:before,
 section.blog article .content-wrap:after {
@@ -713,12 +718,6 @@ section.blog article .content-wrap:after {
 }
 section.blog article .content-wrap:after {
   clear: both;
-}
-section.blog article .content-wrap p {
-  font-size: 21px;
-  font-weight: 300;
-  line-height: 33px;
-  margin: 0 0 32px;
 }
 .wp-pagenavi {
   clear: both;

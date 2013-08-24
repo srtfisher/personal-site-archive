@@ -563,14 +563,14 @@ section.single-work {
 
 footer {
     padding: 30px 0;
-    color: darken(#ffffff, 5%);
-    background: #464f4e;
+    color: lighten(#000000, 50%);
+    background: #F5F5F5;
     
     a {
-        color: darken(white, 10%);
+        color: lighten(#000000, 35%);
         
         &:hover {
-            color: darken(white, 20%);
+            color: #333;
             text-decoration: none;
         }
     }
@@ -654,16 +654,9 @@ section.blog {
         }
         
         .content-wrap {
-            @import 'wp.less';
+            @import 'posting.less';
             
-            .clearfix();
-            
-            p {
-                font-size: 21px;
-                font-weight: 300;
-                line-height: 33px;
-                margin: 0 0 32px;
-            }
+            .clearfix ();
         }
     }
 }
