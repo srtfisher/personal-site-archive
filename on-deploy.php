@@ -9,7 +9,7 @@ require_once(  __DIR__ . '/wordpress/wp-admin/includes/plugin.php');
 
 $plugins = [
 	'akismet/akismet.php',
-	'composer/composer.php',
+	//'composer/composer.php',
 	'disqus-comment-system/disqus.php',
 	'jetpack/jetpack.php',
 	'redirection/redirection.php',

@@ -34,7 +34,10 @@
 		<?php $cellCount = -1;
             // the Loop
 		if (have_posts()) : while (have_posts()) : the_post();
-            	$cellCount++; ?>
+            	$cellCount++;
+            	$url = get_post_meta(get_the_ID(), 'sf-website', TRUE);
+            	$domain = parse_url($url, PHP_URL_HOST);
+            	?>
 			<?php if ($cellCount == 2) : ?>
 				</div><div class="row">
 			<?php $cellCount = 0;
@@ -42,10 +45,10 @@
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<a href="<?php the_permalink(); ?>">
 					<!--<img src="http://placehold.it/460x200" style="max-width:100%;" /> -->
-					<img src="<?php echo home_url().'/wp-content/themes/sf-2013/timthumb.php?src='.urlencode(get_post_meta(get_the_ID(), 'sf-image-small', TRUE)).'&w=460&h=200'; ?>" style="max-width:100%;" />
+					<img src="<?php echo home_url().'/wp-content/themes/sf-2013/timthumb.php?src='.urlencode(get_post_meta(get_the_ID(), 'sf-image-small', TRUE)).'&w=460&h=200&a=t'; ?>" style="max-width:100%;" />
 
 					<h3><?php the_title(); ?></h3>
-					<h5>google.com</h5>
+					<h5><?php echo $domain; ?></h5>
 				</a>
 			</div>
 		<?php endwhile; endif; ?>

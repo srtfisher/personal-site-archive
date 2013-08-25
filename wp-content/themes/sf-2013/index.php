@@ -17,7 +17,7 @@ endif;
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h<?php if (is_single() OR is_page()) echo 2; else echo 4; ?>>
                     
-                    <?php if ( is_single() OR is_page()) : ?>
+                    <?php if ( is_single()) : ?>
                         <h4 class="post-meta"><?php twentyten_posted_on(); ?></h4>
                     <?php endif; ?>
                 </div>
