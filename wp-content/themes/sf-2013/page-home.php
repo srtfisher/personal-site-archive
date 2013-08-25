@@ -2,10 +2,13 @@
 <section class="focus-area dark">
 	<div class="container">
 		<h2 class="leading">Hi, my name is <span class="yellow">Sean Fisher</span></h2>
-		<p class="leading">I'm a full stack developer from New York City. My specilties including
-		WordPress, front and backend Development and custom application
+		<p class="leading">I'm a full stack developer from New York City. My specialties including
+
+		WordPress, full stack development and custom application
+
 		development. I work with individuals and business to create amazing
-		internet applications. Let me help create your.</p>
+
+		Internet applications. Let me help create your idea today.</p>
 
 		<div class="action-btns">
 			<div class="btn-group">
