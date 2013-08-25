@@ -4,9 +4,9 @@
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6">
             <ul class="clearfix">
-                <li><a href="http://twitter.com/srtfisher" target="_blank">Twitter</a></li>
-                <li><a href="http://linkedin.com/in/srtfisher" target="_blank">LinkedIn</a></li>
-                <li><a href="http://facebook.com/talking.with.sean" target="_blank">Facebook</a></li>
+                <li><a href="http://github.com/srtfisher" target="_blank" rel="self">GitHub</a></li>
+                <li><a href="http://twitter.com/srtfisher" target="_blank" rel="self">Twitter</a></li>
+                <li><a href="http://linkedin.com/in/srtfisher" target="_blank" rel="self">LinkedIn</a></li>
             </ul>
         </div>
         
