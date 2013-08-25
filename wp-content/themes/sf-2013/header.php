@@ -44,7 +44,7 @@
                             <li id="nav-about" <?php if (get_the_title() == 'About' ) echo 'class="active"'; ?>><a href="<?=home_url('about')?>" data-target="#about">About Me</a></li>
                             <li id="nav-work"><a href="<?=home_url('')?>#work" data-target="#work">Work Portfolio</a></li>
                             <li <?php if (get_the_title() == 'Blog' ) echo 'class="active"'; ?>><a href="<?=home_url('blog')?>">Blog</a></li>
-                            <li id="nav-contact"><a href="<?=home_url('')?>#contact" data-target="#contact">Contact Me</a></li>
+                            <li id="nav-contact"><a href="<?=home_url('contact')?>" data-target="#contact">Contact Me</a></li>
                         </ul>
                     </nav>
                 </div>

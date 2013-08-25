@@ -3,6 +3,18 @@
         <h3 class="section-title">Let's get in touch.</h3>
         <h4 class="section-sub">We should be in touch. Shoot Sean an email below and he'll get back to you within <strong class="tipsy" title="That is, of course, if I'm not away on a much needed vacation!">one day</strong>.</h4>
         
+        <div class="alt-btns row">
+            <div class="col-lg-3 col-md-3 col-sm-3 left col-lg-push-3 col-md-push-3 col-sm-push-3">
+                <p>Want to chat with me?</p>
+                <a href="#" data-type="message" class="btn btn-primary btn-lg btn-block">Send a Message</a>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-lg-push-3 col-md-push-3 col-sm-push-3">
+                <p>Want to work with me?</p>
+                <a href="#" data-type="project" class="btn btn-default btn-lg btn-block">Start a Project</a>
+            </div>
+        </div>
+
         <div class="row">
         <form action="/contact" method="POST" id="contact-form" enctype="multipart/form-data">
             
@@ -36,5 +48,9 @@
                 <p align="center">Your message has been sent my way &mdash; stay tuned!</p>
             </div>
         </div>
+
+        <?php if (! defined('SINGLE_PAGE')) : ?>
+            <h4 class="section-sub alt-contact">Don't prefer E Mail? I'd love to hear from you &mdash; Call me at <strong>(347) 855-7326</strong> or Skype me at <a href="skype:srtfisher?add">srtfisher</a></h4>
+        <?php endif; ?>
     </div>
 </section>

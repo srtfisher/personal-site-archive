@@ -15,7 +15,7 @@
 	</div>
 </section>
 
-<section class="focus-area portfolio-listing">
+<section class="focus-area portfolio-listing" id="work-scroll">
 	<h2 class="leading">Look at Some of My Work</h2>
 	
 	<?php 
@@ -94,4 +94,23 @@ Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet
     
     <?php get_template_part('contact-form'); ?>
 
-<?php get_footer(); ?>
+<?php 
+add_action('jquery_load', function() {
+?>
+$('#nav-contact a').click(function(e)
+{
+	e.preventDefault();
+	scrollTo('#contact');
+	$('#contact-textarea').focus();
+});
+
+$('#nav-work a').click(function(e)
+{
+	e.preventDefault();
+	scrollTo('#work-scroll');
+});
+
+<?php
+});
+
+get_footer(); ?>

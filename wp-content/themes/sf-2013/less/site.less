@@ -31,6 +31,7 @@ header {
     top:0;
     width: 100%;
     z-index: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     .box-shadow (0 -6px 20px rgba(0,0,0,0.2));
 
     div.site-logo {
@@ -124,6 +125,20 @@ section.focus-area {
         background: #2980b9;
 
         h1, h2, h3, h4 p { color: white; }
+
+        p {
+            color: darken(white, 5%);
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+
+            &:hover {
+                border-bottom-color: white;
+            }
+        }
     }
     p.leading { text-align: center; font-family: @fontsans; }
 
@@ -490,6 +505,30 @@ section.contact {
             &:hover {
                 //background: lighten(#04C, 10%);
             }
+        }
+    }
+
+    .alt-contact {
+        margin: 40px 0 0;
+    }
+
+    .alt-btns {
+        margin: 40px 15px 0;
+
+        .left { text-align: right; }
+    
+        p {
+            color: #888;
+            font-family: @fontsans;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .btn {
+            .border-radius (2px);
+            padding: 15px 20px;
+            font-size: 20px;
+            font-family: @fontsans;
         }
     }
 }

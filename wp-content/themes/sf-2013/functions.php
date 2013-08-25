@@ -134,13 +134,11 @@ function sf_enqueue()
     wp_register_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.js', array(), '1.0');
     wp_register_script( 'sf-2013', get_template_directory_uri().'/js/site.js', array(), '1.0');
     wp_register_script( 'jquery.transit', get_template_directory_uri().'/js/jquery.transit.js', array(), '1.0');
-    wp_register_script( 'jquery.gridrotator', get_template_directory_uri().'/js/jquery.gridrotator.js', array(), '1.0');
     
     // Enqueue Javascript
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
-    wp_enqueue_script('jquery.transit');
-    wp_enqueue_script('jquery.gridrotator');
+    //wp_enqueue_script('jquery.transit');
     wp_enqueue_script('sf-2013');
     
     // Compile the LESS into CSS!
@@ -150,11 +148,9 @@ function sf_enqueue()
     // CSS -- checkedCompile
     wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css');
     wp_register_style('sf-2013', get_template_directory_uri().'/css/site.css');
-    wp_register_style('jquery.gridrotator', get_template_directory_uri().'/css/grid/style.css');
     
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('sf-2013');
-    wp_enqueue_style('jquery.gridrotator');
 
     wp_register_style('syntaxhighlighter-theme-journeys', get_template_directory_uri().'/css/syntax.css',
         array( 'syntaxhighlighter-core' ), '1.2.3'
@@ -162,22 +158,6 @@ function sf_enqueue()
 }
 add_action('wp_enqueue_scripts', 'sf_enqueue');
 
-/**
- * CSS for /wp-admin
- *
- * @access      private
-**/
-function sf_enqueue_admin()
-{
-    return;
-    $less = new lessc;
-    //$less->checkedCompile(__DIR__.'/less/admin')
-    Less::compile('admin-area');
-    
-    wp_register_style('sf_admin', get_template_directory_uri().'/css/admin-area.css');
-
-    wp_enqueue_style('sf_admin');
-}
 
 function autoConvert($text) {
     //$text = preg_replace("/((http(s?):\/\/)|(www\.))([\w\.]+)([a-zA-Z0-9?&%.;:\/=+_-]+)/i", "<a href='http$3://$4$5$6' target='_blank'>$2$4$5$6</a>", $text);

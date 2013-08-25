@@ -4,7 +4,7 @@
 **/
 
 @define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
-if (IS_AJAX) :
+if (IS_AJAX OR isset($_POST['is-robot'])) :
 
 	if (! isset($_POST['is-robot']) AND $_POST['is-robot'] !== 'nope') :
 	    wp_redirect('/', 301);
@@ -42,9 +42,12 @@ if (IS_AJAX) :
 		'Reply-To: '.$_POST['your-email']
 	]);
 
-	echo json_encode(array(
-	    'status'    => 'ok',
-	));
+	if (IS_AJAX)
+		echo json_encode(array(
+		    'status'    => 'ok',
+		));
+	else
+		die('You are good to go! Hear back soon.');
 
 	return;
 endif;
@@ -53,15 +56,11 @@ get_header(); ?>
 <section class="focus-area super-dark">
 	<div class="container">
 		<h2 class="leading">Contact Sean</h2>
+		<p class="leading">Don't prefer E Mail? I'd love to hear from you &mdash; Call me at <strong>(347) 855-7326</strong> or Skype me at <a href="skype:srtfisher?add">srtfisher</a></p>
 	</div>
 </section>
 <?php
 define('SINGLE_PAGE', true);
 get_template_part('contact-form', 'page');
 
-add_action('jquery_load', function() {
-?>
-
-<?php
-});
 get_footer();
