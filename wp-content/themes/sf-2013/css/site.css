@@ -98,6 +98,7 @@ p.leading {
   letter-spacing: 1px;
   margin: 0 0 20px;
   font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
 }
 section.focus-area {
   padding: 100px 0;
@@ -129,17 +130,30 @@ section.focus-area p.leading {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
-section.focus-area div.me-shot {
-  background: url('../img/me.png') no-repeat;
-  height: 466px;
-  width: 940px;
-  position: absolute;
-  z-index: 400;
-  top: 740px;
-}
 section.focus-area .action-btns {
   text-align: center;
   margin: 50px 0 0;
+}
+section.focus-area .action-btns .btn {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 12px 25px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: 'Open Sans', sans-serif;
+  border-width: 3px;
+}
+section.focus-area .action-btns .btn.btn-default {
+  border-color: #555;
+  background: transparent;
+  margin-left: 20px;
+}
+section.focus-area .action-btns .btn.btn-default:hover {
+  background: white;
+}
+section.portfolio-listing {
+  padding-top: 50px;
 }
 section.portfolio-listing .row {
   margin-bottom: 20px;
@@ -169,6 +183,11 @@ section.portfolio-listing p.last-call {
   font-size: 18px;
   margin: 20px 0 0;
   text-align: center;
+}
+section.portfolio-listing p.leading {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 50px;
 }
 section.what-i-work-on {
   background: #0fb9c6;

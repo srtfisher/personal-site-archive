@@ -7,17 +7,16 @@
 		development. I work with individuals and business to create amazing
 		internet applications. Let me help create your.</p>
 
-                <p class="action-btns">
-                    <a href="<?php echo home_url('about'); ?>" class="btn btn-default btn-lg pull-left">About Me</a>
-                    <a href="<?php echo home_url('services'); ?>" class="btn btn-primary btn-lg">What I Can Do For You</a>
-                    <a href="<?php echo home_url('services'); ?>" class="btn btn-default btn-lg pull-right">Contact Me</a>
-                </p>
+		<div class="action-btns">
+			<div class="btn-group">
+				<a href="<?php echo home_url('services'); ?>" class="btn btn-primary btn-lg">What I Can Do For You</a>
+				<a href="<?php echo home_url('contact'); ?>" class="btn btn-default btn-lg pull-right" id="spotlight-contact">Contact Me</a>
+			</div>
+		</div>
 	</div>
 </section>
 
 <section class="focus-area portfolio-listing" id="work-scroll">
-	<h2 class="leading">Look at Some of My Work</h2>
-	
 	<?php 
                 query_posts(array(
                     'post_type'             => 'work',
@@ -30,6 +29,9 @@
                 ));
                 ?>
 	<div class="container">
+		<h2 class="leading">Look at Some of My Work</h2>
+		<p class="leading">I ensure my client's happiness from beginning to end by making a wonderful product that is both beautiful and easy to use.</p>
+
 		<div class="row">
 		<?php $cellCount = -1;
             // the Loop
@@ -97,7 +99,7 @@ Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet
 <?php 
 add_action('jquery_load', function() {
 ?>
-$('#nav-contact a').click(function(e)
+$('#nav-contact a, #spotlight-contact').click(function(e)
 {
 	e.preventDefault();
 	scrollTo('#contact');

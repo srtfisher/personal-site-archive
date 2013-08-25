@@ -109,13 +109,14 @@ h2.leading {
 }
 
 p.leading {
-        color: #A0A0A0;
-        font-size: 21px;
-        line-height: 1.5;
-        letter-spacing: 1px;
-        margin: 0 0 20px;
-        font-weight: 300;
-    }
+    color: #A0A0A0;
+    font-size: 21px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 0 0 20px;
+    font-weight: 300;
+    font-family: @fontsans;
+}
 
 section.focus-area {
     padding: 100px 0;
@@ -142,23 +143,32 @@ section.focus-area {
     }
     p.leading { text-align: center; font-family: @fontsans; }
 
-    div.me-shot {
-        background: url('../img/me.png') no-repeat;
-        height: 466px;
-        width: 940px;
-        
-        position: absolute;
-        z-index: 400;
-        top: 740px;
-    }
-
     .action-btns {
         text-align: center;
         margin: 50px 0 0;
+
+        .btn {
+            .border-radius (0);
+            padding: 12px 25px;
+            font-size: 20px;
+            line-height: 30px;
+            font-family: @fontsans;
+            border-width: 3px;
+
+            &.btn-default {
+                border-color: #555;
+                background: transparent;
+                margin-left: 20px;
+
+                &:hover { background: white; }
+            }
+        }
     }
 }
 
 section.portfolio-listing {
+    padding-top: 50px;
+    
     .row {
         margin-bottom: 20px;
     }
@@ -192,6 +202,12 @@ section.portfolio-listing {
         font-size: 18px;
         margin: 20px 0 0;
         text-align: center;
+    }
+
+    p.leading {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto 50px;
     }
 }
 
