@@ -48,3 +48,20 @@ if (IS_AJAX) :
 
 	return;
 endif;
+
+get_header(); ?>
+<section class="focus-area super-dark">
+	<div class="container">
+		<h2 class="leading">Contact Sean</h2>
+	</div>
+</section>
+<?php
+define('SINGLE_PAGE', true);
+get_template_part('contact-form', 'page');
+
+add_action('jquery_load', function() {
+?>
+
+<?php
+});
+get_footer();
