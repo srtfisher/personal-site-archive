@@ -483,9 +483,9 @@ section.contact {
     background: #f5f5f5;
     
     div.alert {
-        .border-radius (0);
-        border-left: none;
-        border-right: none;
+        border-radius: 0;
+        border-width: 3px 0 3px 0;
+        margin-top: 30px;
 
         p {
             margin: 10px 0;
@@ -494,6 +494,7 @@ section.contact {
     }
     form {
         padding: 20px 0;
+        font-family: @fontsans;
 
         textarea {
             min-height: 200px;
@@ -505,7 +506,7 @@ section.contact {
             padding: 18px;
         }
         
-        input.subject, input.email, input.name {
+        input {
             padding: 14px;
             width: 100%;
             font-size: 14px;

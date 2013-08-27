@@ -11,30 +11,50 @@ if (IS_AJAX OR isset($_POST['is-robot'])) :
 	    exit;
 	endif;
 
-	if (! isset($_POST['subject']) OR empty($_POST['subject']) OR ! isset($_POST['content']) OR empty($_POST['content'])) :
-	    echo json_encode(array('status' => 'error'));
-	    exit;
-	endif;
-
-	if (! isset($_POST['your-name']) OR empty($_POST['your-name']) OR ! isset($_POST['your-email']) OR empty($_POST['your-email'])) :
-	    echo json_encode(array('status' => 'personal-details'));
-	    exit;
-	endif;
-
 	if (! is_email($_POST['your-email'])) :
-	    echo json_encode(array('status' => 'invalid-email'));
-	    exit;
+		echo json_encode(array('status' => 'invalid-email'));
+		exit;
 	endif;
 
-	$msg = '<p>This is a contact form from your website:<br />
-	<br />
-	User Details: <br />
-	'.$_POST['your-name'].' '.$_POST['your-email'].'<br />
-	<br />
+	if (! isset($_POST['type']) OR $_POST['type'] == 'message') :
+		if (! isset($_POST['subject']) OR empty($_POST['subject']) OR ! isset($_POST['content']) OR empty($_POST['content'])) :
+		    echo json_encode(array('status' => 'error'));
+		    exit;
+		endif;
 
-	<h3>'.$_POST['subject'].'</h3>
+		if (! isset($_POST['your-name']) OR empty($_POST['your-name']) OR ! isset($_POST['your-email']) OR empty($_POST['your-email'])) :
+		    echo json_encode(array('status' => 'personal-details'));
+		    exit;
+		endif;
 
-	<p>'.htmlentities($_POST['content']).'</p>';
+		$msg = '<p>This is a contact form from your website:<br />
+		<br />
+		User Details: <br />
+		'.$_POST['your-name'].' '.$_POST['your-email'].'<br />
+		<br />
+
+		<h3>'.$_POST['subject'].'</h3>
+
+		<p>'.htmlentities($_POST['content']).'</p>';
+	else :
+		// Project
+		$msg = sprintf('<p>This is a project form from your website:</p>
+<p>User: %s - %s<br />
+About Project: %s<br />
+Projects they like: %s<br />
+Budget: %s<br />
+Completion Date: %s<br />
+Any Other Information: %s</p>',
+		$_POST['your-name'],
+		$_POST['your-email'],
+		nl2br($_POST['describe-project']),
+		nl2br($_POST['describe-projects-they-like']),
+		$_POST['budget'],
+		$_POST['completion-date'],
+		$_POST['any-other-information']
+	);
+		
+	endif;
 
 	add_filter('wp_mail_content_type',create_function('', 'return "text/html";'));
 	wp_mail('srtfisher+contact@gmail.com', 'Contact Form: '.$_POST['subject'], $msg, [

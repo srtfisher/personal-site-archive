@@ -409,11 +409,9 @@ section.contact {
   background: #f5f5f5;
 }
 section.contact div.alert {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
-  border-left: none;
-  border-right: none;
+  border-width: 3px 0 3px 0;
+  margin-top: 30px;
 }
 section.contact div.alert p {
   margin: 10px 0;
@@ -421,6 +419,7 @@ section.contact div.alert p {
 }
 section.contact form {
   padding: 20px 0;
+  font-family: 'Open Sans', sans-serif;
 }
 section.contact form textarea {
   min-height: 200px;
@@ -433,9 +432,7 @@ section.contact form textarea {
   height: 239px;
   padding: 18px;
 }
-section.contact form input.subject,
-section.contact form input.email,
-section.contact form input.name {
+section.contact form input {
   padding: 14px;
   width: 100%;
   font-size: 14px;
