@@ -2,7 +2,7 @@
 <footer>
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
             <ul class="clearfix">
                 <li><a href="http://github.com/srtfisher" target="_blank" rel="self">GitHub</a></li>
                 <li><a href="http://twitter.com/srtfisher" target="_blank" rel="self">Twitter</a></li>
@@ -10,7 +10,7 @@
             </ul>
         </div>
         
-        <div class="col-lg-6 col-md-6 col-sm-6" style="text-align:right;">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-5" style="text-align:right;">
             &copy; <?=date('Y')?> <a href="<?php echo home_url(); ?>">Sean Fisher</a>
         </div>
     </div>

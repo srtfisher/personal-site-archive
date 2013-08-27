@@ -33,11 +33,20 @@
     <header class="<?php if (is_front_page()) echo 'loading'; ?>">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 site-logo">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-7 site-logo">
                     <a href="<?=home_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
                 </div>
                 
-                <div class="col-lg-9 col-md-9">
+                <div class="dropdown-toggle visible-xs col-xs-5">
+                    <button class="navbar-toggle" id="nav-toggle" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 nav-wrap">
                     <nav id="site-nav-wrap">
                         <ul id="site-nav">
                             <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=home_url('')?>" data-target="#spotlight">Home</a></li>

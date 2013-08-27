@@ -5,6 +5,11 @@
 var SF = {};
 
 $(document).ready(function () {
+    $('#nav-toggle').click(function()
+    {
+        $('.nav-wrap').slideToggle()
+    });
+    
     $('form#contact-form').submit(function(e)
     {
         e.preventDefault();

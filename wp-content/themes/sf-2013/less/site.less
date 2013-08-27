@@ -141,7 +141,12 @@ section.focus-area {
             }
         }
     }
-    p.leading { text-align: center; font-family: @fontsans; }
+    p.leading {
+        text-align: center;
+        font-family: @fontsans;
+        margin: 0 auto;
+        width: 90;
+    }
 
     .action-btns {
         text-align: center;
@@ -783,7 +788,7 @@ section.blog {
 	color:#FFF;
 }
 
-@media (max-width: 767px) {
+@media (max-width: @screen-sm) {
      body {
           padding: 0;
      }
@@ -920,40 +925,70 @@ section.blog {
           }
      }
      
-     header {
-          position: static;
-          
-          div.site-logo {
-               text-align: center;
-          }
-          
-          nav {
-               float: none;
-               width: auto;
-               
-               ul {
-                    li {
-                         float: none;
-                         
-                         a {
-                              text-align: center;
-                              
-                              .arrow {
-                                   display: none;
-                              }
-                         }
+    header {
+        padding: 0;
+        position: static;
+
+        div.site-logo {
+            margin: 0;
+            
+            a {
+                padding: 10px 0 15px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        button.navbar-toggle {
+            border-color: rgba(0, 0, 0, 0.1);
+            padding: 15px;
+
+            .icon-bar {
+                background-color: black;
+            }
+
+            &:focus {
+                outline: none;
+                .box-shadow (none);
+                border-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+    
+        .nav-wrap { display: none; padding: 0; }
+
+        nav {
+            float: none;
+            width: auto;
+            
+            ul {
+                margin: 0 0 10px; padding: 0;
+
+                li {
+                    float: none;
+                    margin: 0;
+                    padding: 0 15px;
+
+                    a {
+                        text-align: left;
+                        padding: 10px;
+                        font-size: 17px;
                     }
-                    
-                    li.active .arrow { display: none; }
-               }
-          }
-     }
+
+                    &.active {
+                        background: rgba(0,0,0,0.1);
+                    }
+                }
+            }
+        }
      
      footer {
           .span5 {
                text-align: center !important;
           }
      }
+}
 }
 
 

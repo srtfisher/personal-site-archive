@@ -1,13 +1,4 @@
-<?php
-get_header();
-
-if (is_page()) :
-#    query_posts(array(
-#        'posts_per_page'        => 10,
-#    ));
-endif;
-
-?>
+<?php get_header(); ?>
 <section class="blog">
     <div class="container">
         <?php if (have_posts()) : while(have_posts() ) : the_post(); ?>
@@ -27,7 +18,7 @@ endif;
                     <?php the_content(); ?>
                 </div>
                 <?php else : ?>
-                <div class="content-wrap"><?php the_excerpt(); ?></div>
+                <div class="content-wrap"><?php /*the_excerpt*/ the_content(); ?></div>
                 <?php endif; ?>
                 
                 <?php if (! is_single() AND ! is_page()) : ?>

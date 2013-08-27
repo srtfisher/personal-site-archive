@@ -129,6 +129,8 @@ section.focus-area.super-dark a:hover {
 section.focus-area p.leading {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  width: 90;
 }
 section.focus-area .action-btns {
   text-align: center;
@@ -793,7 +795,7 @@ section.blog article .content-wrap:after {
   border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
   color: #FFF;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   body {
     padding: 0;
   }
@@ -909,28 +911,57 @@ section.blog article .content-wrap:after {
     padding: 0 20px;
   }
   header {
+    padding: 0;
     position: static;
   }
   header div.site-logo {
-    text-align: center;
+    margin: 0;
+  }
+  header div.site-logo a {
+    padding: 10px 0 15px;
+  }
+  header div.site-logo img {
+    max-width: 100%;
+  }
+  header button.navbar-toggle {
+    border-color: rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+  header button.navbar-toggle .icon-bar {
+    background-color: black;
+  }
+  header button.navbar-toggle:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: rgba(0,0,0,0.5);
+  }
+  header .nav-wrap {
+    display: none;
+    padding: 0;
   }
   header nav {
     float: none;
     width: auto;
   }
+  header nav ul {
+    margin: 0 0 10px;
+    padding: 0;
+  }
   header nav ul li {
     float: none;
+    margin: 0;
+    padding: 0 15px;
   }
   header nav ul li a {
-    text-align: center;
+    text-align: left;
+    padding: 10px;
+    font-size: 17px;
   }
-  header nav ul li a .arrow {
-    display: none;
+  header nav ul li.active {
+    background: rgba(0,0,0,0.1);
   }
-  header nav ul li.active .arrow {
-    display: none;
-  }
-  footer .span5 {
+  header footer .span5 {
     text-align: center !important;
   }
 }

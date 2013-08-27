@@ -1,4 +1,0 @@
-[05-Oct-2012 04:17:26 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/sfisher/public_html/wp-content/themes/sf-2012/index.php on line 7
-[10-Nov-2012 19:40:37 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/sfisher/public_html/wp-content/themes/sf-2012/index.php on line 7
-[24-Jan-2013 15:19:27 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/sfisher/public_html/wp-content/themes/sf-2012/index.php on line 7
-[17-May-2013 02:41:33 America/Chicago] PHP Fatal error:  Call to undefined function get_header() in /home/sfisher/public_html/wp-content/themes/sf-2012/index.php on line 7
