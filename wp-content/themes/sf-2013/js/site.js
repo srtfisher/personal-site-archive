@@ -20,6 +20,11 @@ $(document).ready(function () {
 
         $('form[data-form-type="'+type+'"]').fadeIn();
         $('.alt-btns .btn[data-type="'+type+'"]').removeClass('btn-default').addClass('btn-primary');
+
+        if (type == 'message')
+            $('#contact-textarea').focus();
+        else
+            $('#your-name').focus();
     });
 
     $('form.contact-form').submit(function(e)

@@ -19,7 +19,7 @@
 	</div>
 </section>
 
-<section class="focus-area portfolio-listing" id="work-scroll">
+<section class="focus-area portfolio-listing" id="work">
 	<?php 
                 query_posts(array(
                     'post_type'             => 'work',
@@ -32,6 +32,7 @@
                 ));
                 ?>
 	<div class="container">
+		<a name="work"></a>
 		<h2 class="leading">Look at Some of My Work</h2>
 		<p class="leading">I ensure my client's happiness from beginning to end by making a wonderful product that is both beautiful and easy to use.</p>
 
@@ -112,7 +113,7 @@ $('#nav-contact a, #spotlight-contact').click(function(e)
 $('#nav-work a').click(function(e)
 {
 	e.preventDefault();
-	scrollTo('#work-scroll');
+	scrollTo('#work');
 });
 
 <?php
