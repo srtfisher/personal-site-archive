@@ -6,6 +6,10 @@
 **/
 
 define('SF_INC', dirname(__FILE__).'/inc/');
+
+if (! file_exists(__DIR__.'/vendor/autoload.php'))
+    return print "Composer not setup for sf-2013";
+
 require(__DIR__.'/vendor/autoload.php');
 
 // Init Hook

@@ -807,6 +807,14 @@ section.blog {
           }
      }
      
+     section.focus-area {
+        .action-btns .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+     }
+
      section.services {
           p {
                padding: 0 15px;
@@ -1035,5 +1043,17 @@ section.blog {
             line-height: 20px;
             margin: 0;
         }
+    }
+}
+
+@media (min-width: @screen-sm) and (max-width: @screen-md) {
+    header .site-logo img { max-width: 100%; }
+    header nav ul li a {
+        padding-left: 6px; padding-right: 6px;
+    }
+
+    header {
+        .nav-wrap ul { padding: 0;}
+        .site-logo, .nav-wrap { padding: 0; }
     }
 }

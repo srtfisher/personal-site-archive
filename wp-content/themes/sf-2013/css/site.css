@@ -808,6 +808,11 @@ section.blog article .content-wrap:after {
     max-width: 100% !important;
     height: 220px;
   }
+  section.focus-area .action-btns .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
   section.services p {
     padding: 0 15px;
   }
@@ -1001,4 +1006,20 @@ section.blog article .content-wrap:after {
   font-size: 15px;
   line-height: 20px;
   margin: 0;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header .site-logo img {
+    max-width: 100%;
+  }
+  header nav ul li a {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  header .nav-wrap ul {
+    padding: 0;
+  }
+  header .site-logo,
+  header .nav-wrap {
+    padding: 0;
+  }
 }
