@@ -21,16 +21,16 @@
 
 <section class="focus-area portfolio-listing" id="work">
 	<?php 
-                query_posts(array(
-                    'post_type'             => 'work',
-                    'posts_per_page'        => 30,
-                    
-                    'orderby'           => 'meta_value_num',
-                    'meta_key'          => 'sf-weight',
-                    'order'             => 'asc',
-                    
-                ));
-                ?>
+      query_posts(array(
+          'post_type'             => 'work',
+          'posts_per_page'        => 30,
+          
+          'orderby'           => 'meta_value_num',
+          'meta_key'          => 'sf-weight',
+          'order'             => 'asc',
+          
+      ));
+      ?>
 	<div class="container">
 		<a name="work"></a>
 		<h2 class="leading">Look at Some of My Work</h2>

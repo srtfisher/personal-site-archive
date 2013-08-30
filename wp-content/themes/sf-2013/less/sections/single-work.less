@@ -1,0 +1,87 @@
+
+// Work Single Page
+section.single-work {
+    div.container {
+        width: 820px; // Subtract 2 cols
+    }
+    
+    div.featured-image {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 1px;
+        //border-bottom: 1px solid #888;
+        
+        margin: 20px 0 20px;
+        
+        img {
+            border: 1px solid #eee;
+            padding: 3px;
+            
+        }
+    }
+    
+    div.work-sidebar {
+        border-left: 1px solid #ddd;
+        padding-left: 22px;
+    }
+    
+    div.work-featured {
+        font-family: @fontsans;
+
+        h2 {
+            font-weight: 400;
+            letter-spacing: -1px;
+            font-size: 36px;
+        }
+        
+        h4 {
+            margin-bottom: 10px;
+            
+            a {
+                color: #888;
+                font-weight: normal;
+                
+                &:hover {
+                    color: #444;
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        p {
+            font-size: 15px;
+            margin: 1em 0;
+            line-height: 20px;
+        }
+    }
+    
+    // Footer
+    div.footer-container {
+        border-top: 1px solid #ddd;
+        margin-top: 30px;
+        padding-top: 20px;
+        
+        h3 {
+            font-weight: bold;
+            font-size: 26px;
+            margin-bottom: 0;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 25px;
+        }
+        
+        .btn.btn-primary {
+            margin-top: 23px;
+            float: right;
+            padding: 13px 20px;
+            font-size: 22px;
+            text-shadow: 0 1px 0 darken(@blueDark, 20%);
+            
+            &:hover {
+                background: @red;
+            }
+        }
+    }
+}
