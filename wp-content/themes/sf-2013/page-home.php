@@ -8,7 +8,7 @@
 
 		development. I work with individuals and business to create amazing
 
-		Internet applications. Let me help create your idea today.</p>
+		Internet applications. <strong>Let me help create your idea today.</strong></p>
 
 		<div class="action-btns">
 			<div class="btn-group">

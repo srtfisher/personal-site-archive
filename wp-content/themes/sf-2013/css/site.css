@@ -148,7 +148,11 @@ section.focus-area p.leading {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
-  width: 90;
+  width: 90%;
+}
+section.focus-area p.leading strong {
+  font-weight: 400;
+  color: #555;
 }
 section.focus-area .action-btns {
   text-align: center;
@@ -1058,7 +1062,7 @@ section.solutions-process .solution-item p {
   padding: 15px 20px;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
-  border-radius: 2px;
+  border-radius: 0;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header .site-logo img {

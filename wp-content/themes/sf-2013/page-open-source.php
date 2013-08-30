@@ -2,6 +2,7 @@
 $repos = wp_cache_get('sf:repos');
 if (false === $repos) :
 	$repos = wp_remote_get('http://srtfisher.github.io/repos.json')['body'];
+
 	wp_cache_set('sf:repos', $repos, '', 3600);
 endif;
 $repos = json_decode($repos);
