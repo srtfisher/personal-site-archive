@@ -492,16 +492,21 @@ section.contact {
     padding: 50px 0;
     background: #f5f5f5;
     
-    div.alert {
-        border-radius: 0;
-        border-width: 3px 0 3px 0;
-        margin-top: 30px;
+    .contact-alert {
+        text-align: center;
+        width: 50%;
+        background: whiteSmoke;
+        border: 1px solid #DDD;
+        box-shadow: 0 0 9px -4px rgba(0, 0, 0, 0.76), inset 0 0 0px 1px #FFF;
+        font-family: @fontsans;
+        padding: 20px;
+        margin: 40px auto;
 
-        p {
-            margin: 10px 0;
-            font-size: 15px;
+        &.error {
+            border: 3px solid red;
         }
     }
+
     form {
         padding: 20px 0;
         font-family: @fontsans;
@@ -1057,8 +1062,9 @@ section.blog {
     }
 }
 
+// Services Page
 section.solutions-process {
-    margin-top: 25px;
+    margin: 25px 0;
 
     p.leading {
         width: 80%;
@@ -1079,6 +1085,52 @@ section.solutions-process {
         }
     }
 }
+
+.solutions-feature {
+    margin: 80px 0;
+
+    h3.leading {
+        font-weight: 600;
+    }
+
+    .section-info {
+        font-family: @fontsans;
+        margin: 1em 0;
+        color: #474747;
+        font-size: 16px;
+        line-height: 27px;
+    }
+
+    &.center-feature {
+        margin-bottom: 0;
+
+        .leading { text-align: center; }
+
+        p.leading { width: 80%; margin: 0 auto; }
+
+        .media-wrap {
+            text-align: center;
+            margin: 40px auto 0;
+            img { max-width: 100%;}
+        }
+    }
+
+
+    &.cta-feature {
+        padding: 50px 0;
+        margin-bottom: 0;
+        background: #F5F5F5;
+
+        .btn {
+            padding: 15px 20px;
+            font-size: 20px;
+            font-family: @fontsans;
+            border-radius: 2px;
+        }
+    }
+}
+
+
 
 @media (min-width: @screen-sm) and (max-width: @screen-md) {
     header .site-logo img { max-width: 100%; }

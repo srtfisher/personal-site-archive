@@ -93,14 +93,11 @@
             </div>
         </form>
 
-        <div id="content-error" style="display:none;">
-            <div class="alert alert-error"><p align="center">Your form contains invalid things &mdash; try and fix it!</p></div>
-        
+        <div id="contact-error" class="contact-alert error" style="display:none;">
+            <h4 class="leading">Your form contains invalid things &mdash; try and fix it!</h4>
         </div>
-        <div id="contact-sent" style="display:none;">
-            <div class="alert alert-info">
-                <p align="center">Your message has been sent my way &mdash; stay tuned!</p>
-            </div>
+        <div id="contact-sent" class="contact-alert" style="display:none;">
+            <h4 class="leading">Your message has been sent &mdash; stay tuned!</h4>
         </div>
 
         <?php if (! defined('SINGLE_PAGE')) : ?>

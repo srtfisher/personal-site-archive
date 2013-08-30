@@ -31,10 +31,11 @@ $(document).ready(function () {
     {
         e.preventDefault();
         
-        $('#content-error').hide();
+        $('#contact-error').hide();
         $('#is-robot').val('nope');
-        Data = $(this).serialize();
-        
+        var Data = $(this).serialize(),
+            email = $(this).find('input[name="email"]').val();
+
         $.post('/contact/', Data, function(j)
         {
             
@@ -42,10 +43,12 @@ $(document).ready(function () {
             {
                 $('form.contact-form').slideUp();
                 $('#contact-sent').fadeIn();
+
+                _gaq.push(['_trackEvent', 'ContactFrom', 'Submit', email]);
             }
             else
             {
-                $('#content-error').fadeIn();
+                $('#contact-error').fadeIn();
             }
         }, 'json');
         

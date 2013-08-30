@@ -12,8 +12,8 @@
 
 		<div class="action-btns">
 			<div class="btn-group">
-				<a href="<?php echo home_url('services'); ?>" class="btn btn-primary btn-lg">What I Can Do For You</a>
-				<a href="<?php echo home_url('contact'); ?>" class="btn btn-default btn-lg pull-right" id="spotlight-contact">Contact Me</a>
+				<a href="<?php echo home_url('services'); ?>/?utm_source=seanfisherco&utm_medium=cta-button&utm_content=spotlight&utm_campaign=services" class="btn btn-primary btn-lg">What I Can Do For You</a>
+				<a href="<?php echo home_url('contact'); ?>/?utm_source=seanfisherco&utm_medium=cta-button&utm_content=spotlight&utm_campaign=contact" class="btn btn-default btn-lg pull-right" id="spotlight-contact" data-medium="spotlight">Contact Me</a>
 			</div>
 		</div>
 	</div>
@@ -108,6 +108,8 @@ $('#nav-contact a, #spotlight-contact').click(function(e)
 	e.preventDefault();
 	scrollTo('#contact');
 	$('#contact-textarea').focus();
+	
+	_gaq.push(['_trackEvent', 'Button', 'Click', $(this).data('medium')]);
 });
 
 $('#nav-work a').click(function(e)
