@@ -1,9 +1,12 @@
 <?php
-if (! defined('MESSAGE_TYPE')) define('MESSAGE_TYPE', 'message'); ?>
+if (! defined('MESSAGE_TYPE')) define('MESSAGE_TYPE', 'message');
+if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', false); ?>
 <section class="contact" id="contact">
     <div class="container">
-        <h3 class="section-title">Let's get in touch.</h3>
-        <h4 class="section-sub">We should be in touch. Shoot Sean an email below and he'll get back to you within <strong class="tipsy" title="That is, of course, if I'm not away on a much needed vacation!">one day</strong>.</h4>
+        <?php if (! SINGLE_PAGE) : ?>
+            <h3 class="section-title">Let's get in touch.</h3>
+            <h4 class="section-sub">We should be in touch. Shoot Sean an email below and he'll get back to you within <strong class="tipsy" title="That is, of course, if I'm not away on a much needed vacation!">one day</strong>.</h4>
+        <?php endif; ?>
         
         <div class="alt-btns row">
             <div class="col-lg-3 col-md-3 col-sm-4 left col-lg-push-3 col-md-push-3 col-sm-push-2">

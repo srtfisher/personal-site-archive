@@ -13,18 +13,20 @@ $(document).ready(function () {
     $('.btn[data-type]').click(function(e)
     {
         e.preventDefault();
-        type = $(this).data('type');
+        var type = $(this).data('type');
+
+        onComplete = function() {
+            if (type == 'message')
+                $('#contact-textarea').focus();
+            else
+                $('#your-name').focus();
+        };
 
         $('form[data-form-type!="'+type+'"]').fadeOut(200);
         $('.alt-btns .btn[data-type!="'+type+'"]').removeClass('btn-primary').addClass('btn-default');
 
-        $('form[data-form-type="'+type+'"]').fadeIn();
+        $('form[data-form-type="'+type+'"]').fadeIn(400, onComplete);
         $('.alt-btns .btn[data-type="'+type+'"]').removeClass('btn-default').addClass('btn-primary');
-
-        if (type == 'message')
-            $('#contact-textarea').focus();
-        else
-            $('#your-name').focus();
     });
 
     $('form.contact-form').submit(function(e)

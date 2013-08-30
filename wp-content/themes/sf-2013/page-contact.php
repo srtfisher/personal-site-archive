@@ -75,7 +75,7 @@ endif;
 get_header(); ?>
 <section class="focus-area super-dark">
 	<div class="container">
-		<h2 class="leading">Contact Sean</h2>
+		<h2 class="leading">Make the good decision, contact me.</h2>
 		<p class="leading">Don't prefer E Mail? I'd love to hear from you. Call me at <strong>(347) 855-7326</strong> or Skype me at <a href="skype:srtfisher?add">srtfisher</a></p>
 	</div>
 </section>
