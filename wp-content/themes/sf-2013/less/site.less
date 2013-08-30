@@ -414,14 +414,18 @@ input.form-control, textarea.form-control {
 }
 
 @media (min-width: @screen-sm) and (max-width: @screen-md) {
-    header .site-logo img { max-width: 100%; }
-    header nav ul li a {
-        padding-left: 6px; padding-right: 6px;
-    }
-
-    header {
+    #global-header {
+        .site-logo img { max-width: 100%; }
         .nav-wrap ul { padding: 0;}
         .site-logo, .nav-wrap { padding: 0; }
+        
+        nav ul li {
+            margin-right: 5px;
+
+            a {
+                padding-left: 6px; padding-right: 6px;
+            }
+        }
     }
 
     section.focus-area.services {
