@@ -1,0 +1,27 @@
+{
+	"name": "srtfisher/seanfisher.co",
+	"description": "Personal SeanFisher.co site",
+	"repositories":[
+		{
+			"type":"composer",
+			"url":"http://wpackagist.org"
+		}
+	],
+	"require": {
+		"wpackagist/jetpack": "*",
+		"wpackagist/all-in-one-seo-pack": "*",
+		"wpackagist/disqus-comment-system": "*",
+		"wpackagist/mp6": "*",
+		"wpackagist/redirection": "*",
+		"wpackagist/wp-pagenavi": "*",
+		"wpackagist/akismet": "*",
+		"wpackagist/disable-wordpress-plugin-updates": "dev-master",
+		"wpackagist/wordpress-importer": "*",
+		"wpackagist/syntaxhighlighter": "*",
+		"wpackagist/lockdown-wp-admin": "*"
+	},
+	"scripts": {
+		"post-update-cmd": "php on-deploy.php",
+		"post-install-cmd": "php on-deploy.php"
+	}
+}
