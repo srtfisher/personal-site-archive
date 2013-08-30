@@ -8,12 +8,12 @@ if (! defined('MESSAGE_TYPE')) define('MESSAGE_TYPE', 'message'); ?>
         <div class="alt-btns row">
             <div class="col-lg-3 col-md-3 col-sm-3 left col-lg-push-3 col-md-push-3 col-sm-push-3">
                 <p>Want to chat with me?</p>
-                <a href="#" data-type="message" class="btn btn-<?php echo (MESSAGE_TYPE == 'message') ? 'primary' : 'default'; ?> btn-lg btn-block">Send a Message</a>
+                <a href="#" data-type="message" class="btn btn-flat btn-<?php echo (MESSAGE_TYPE == 'message') ? 'primary' : 'default'; ?> btn-lg btn-block">Send a Message</a>
             </div>
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-lg-push-3 col-md-push-3 col-sm-push-3">
                 <p>Want to work with me?</p>
-                <a href="#" data-type="project" class="btn btn-<?php echo (MESSAGE_TYPE == 'project') ? 'primary' : 'default'; ?> btn-lg btn-block">Start a Project</a>
+                <a href="#" data-type="project" class="btn btn-flat btn-<?php echo (MESSAGE_TYPE == 'project') ? 'primary' : 'default'; ?> btn-lg btn-block">Start a Project</a>
             </div>
         </div>
 

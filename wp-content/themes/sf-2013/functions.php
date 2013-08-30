@@ -178,7 +178,7 @@ if ( ! function_exists( 'twentyten_posted_on' ) ) :
  * @since Twenty Ten 1.0
  */
 function twentyten_posted_on() {
-    echo 'Posted on <a href="'.get_permalink().'" rel="bookmark">'.get_the_date().'</a>';
+    echo '<a href="'.get_permalink().'" rel="bookmark">'.get_the_date().'</a>';
     return;
 	printf( __( '<span class="%1$s">Posted on</span> %2$s  %3$s', 'twentyten' ),
 		'meta-prep meta-prep-author',

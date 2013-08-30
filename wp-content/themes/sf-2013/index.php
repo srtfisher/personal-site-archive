@@ -18,10 +18,14 @@
                     <?php the_content(); ?>
                 </div>
                 <?php else : ?>
-                <div class="content-wrap"><?php /*the_excerpt*/ the_content(); ?></div>
+                <div class="content-wrap listing"><?php
+                    if (has_excerpt())
+                        the_excerpt();
+                    else
+                        the_content(); ?></div>
                 <?php endif; ?>
                 
-                <?php if (! is_single() AND ! is_page()) : ?>
+                <?php if (! is_single() AND ! is_page() AND 1 == 2) : ?>
                     <a href="<?php the_permalink(); ?>" class="btn btn-primary right">Read More &rarr;</a>
                 <?php endif; ?>
             </article>

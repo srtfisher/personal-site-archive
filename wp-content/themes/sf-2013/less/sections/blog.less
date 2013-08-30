@@ -39,8 +39,7 @@ section.blog {
         }
         
         .post-title-wrap {
-            border-bottom: 1px solid darken(#eeeeee, 10%);
-            padding: 18px 0;
+            padding: 18px 0 0;
 
             .post-title {
                 font-size: 36px;
@@ -74,6 +73,16 @@ section.blog {
             @import '../posting.less';
             
             .clearfix ();
+
+            &.listing {
+                p {
+                    font-weight: normal;
+                    font-size: 21px;
+                    line-height: 40px;
+                    margin-bottom: 30px;
+                    font-family: @fontsans;
+                }
+            }
         }
     }
 }

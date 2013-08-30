@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5 {
 body.darker-header #global-header {
     .box-shadow  (0 -6px 20px black);
 }
+.nav-a-active () {
+    color: black;
+    font-weight: bold;
+}
 #global-header {
     background: white;
     padding: 20px 0;
@@ -81,18 +85,17 @@ body.darker-header #global-header {
                 }
                 
                 &.active a {
-                    color: black;
-                    font-weight: bold;
-                }
-                
-                &.active .arrow {
-                    display: block;
+                    .nav-a-active;
                 }
             }
         }
     }
     
 } // Header
+
+body.blog #nav-blog a {
+    .nav-a-active;
+}
 
 section.focus-area {
     padding: 100px 0;
@@ -127,7 +130,7 @@ section.focus-area {
     }
 
     &.services {
-        background: url('../services-bg.jpg');
+        background: url('../img/services-bg.jpg');
         background-size: cover;
         padding: 150px 0;
         background-position-y: -271px;
@@ -139,7 +142,7 @@ section.focus-area {
         margin: 0 auto;
         width: 90%;
 
-        strong {
+        strong.dark {
             font-weight: 400;
             color: #555;
         }
@@ -207,6 +210,32 @@ p.leading {
     margin: 0 0 20px;
 }
 
+input.form-control, textarea.form-control {
+    background: #E6E6E6;
+    border-color: rgba(0, 0, 0, 0);
+
+    &:focus {
+        outline: none;
+        .box-shadow (none);
+        background: darken(#e6e6e6, 5%);
+        border-color: transparent;
+        .transition (.25s);
+    }
+}
+
+.btn.btn-flat {
+    border-width: 3px;
+    border-radius: 0;
+
+    &.btn-default {
+        border-color: black;
+    }
+
+    &:focus {
+        outline: none;
+        .box-shadow (none);
+    }
+}
 
 @import 'sections/work-listing.less';
 @import 'sections/what-i-work-on.less';
