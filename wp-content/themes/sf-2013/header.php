@@ -12,14 +12,6 @@
 	?></title>
 
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js"></script>
-
-<noscript>
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/css/grid/fallback.css" />
-</noscript>
-<!--[if lt IE 9]>
-    <link rel="stylesheet" href="<?=get_template_directory_uri()?>/css/grid/fallback.css" />
-<![endif]-->
-
 <?php
 	if (is_singular() && get_option('thread_comments'))
 		wp_enqueue_script('comment-reply');

@@ -132,12 +132,12 @@ function sf_enqueue()
 {
     // Fix jQuery to load from Google's CDN
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', array(), '1.7.2');
+    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2');
     
     // Add our scripts
-    wp_register_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.js', array(), '1.0');
-    wp_register_script( 'sf-2013', get_template_directory_uri().'/js/site.js', array(), '1.0');
-    wp_register_script( 'jquery.transit', get_template_directory_uri().'/js/jquery.transit.js', array(), '1.0');
+    wp_register_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.js', array(), '3.0');
+    wp_register_script( 'sf-2013', get_template_directory_uri().'/js/site.js', array(), '2013');
+    //wp_register_script( 'jquery.transit', get_template_directory_uri().'/js/jquery.transit.js', array(), '1.0');
     
     // Enqueue Javascript
     wp_enqueue_script('jquery');
@@ -201,4 +201,9 @@ add_filter('syntaxhighlighter_themes', function($themes)
 {
     $themes['journeys'] = __( 'Journeys',      'journeys' );
     return $themes;
+});
+
+add_action('template_redirect', function() {
+    remove_action( 'wp_head', 'feed_links', 2 );
+    remove_action( 'wp_head', 'feed_links_extra', 3 );
 });
