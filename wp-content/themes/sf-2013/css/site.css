@@ -818,44 +818,19 @@ section.blog article .content-wrap:after {
   body {
     padding: 0;
   }
-  section.spotlight {
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
-  section.spotlight div.me-shot {
-    position: static !important;
-    max-width: 100% !important;
-    height: 220px;
-  }
   section.focus-area .action-btns .btn {
     display: block;
     width: 100%;
     margin-bottom: 10px;
   }
-  section.services p {
-    padding: 0 15px;
+  section.focus-area.services {
+    background-position-y: 0;
   }
-  section.services .work-history {
-    padding: 0 15px;
+  section.solutions-process .solution-item {
+    padding: 0 20px 20px;
   }
-  section.services div.freelance-cta {
-    border-top: 1px solid #d7d7c1;
-    border-bottom: 1px solid #d7d7c1;
-  }
-  section.services .span4.col {
-    text-align: center;
-  }
-  section.services .left,
-  section.services .right {
-    float: none;
-  }
-  section.services .quotes .quote img.img-circle {
-    max-width: 50%;
-  }
-  section.services .quotes .quote a.span2,
-  section.services .quotes .quote p,
-  section.services .quotes .quote cite {
-    text-align: center;
+  section.solutions-feature img {
+    max-width: 100%;
   }
   section.social,
   section.contact {
@@ -1099,5 +1074,8 @@ section.solutions-process .solution-item p {
   header .site-logo,
   header .nav-wrap {
     padding: 0;
+  }
+  section.focus-area.services {
+    background-position-y: 0;
   }
 }

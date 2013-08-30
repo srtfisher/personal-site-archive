@@ -805,62 +805,32 @@ section.blog {
 }
 
 @media (max-width: @screen-sm) {
-     body {
-          padding: 0;
-     }
-     
-     section.spotlight {
-     
-          padding-top: 20px;
-          padding-bottom: 10px;
-          
-          div.me-shot {
-               position: static !important;
-               max-width: 100% !important;
-               height: 220px;
-               
-               .background-size(100%);
-          }
-     }
-     
-     section.focus-area {
+    body {
+        padding: 0;
+    }
+    section.focus-area {
         .action-btns .btn {
             display: block;
             width: 100%;
             margin-bottom: 10px;
         }
-     }
 
-     section.services {
-          p {
-               padding: 0 15px;
-          }
-          
-          .work-history {
-               padding: 0 15px;
-          }
-          
-          div.freelance-cta {
-               border-top: 1px solid darken(#E7E7DA, 8%);
-               border-bottom: 1px solid darken(#E7E7DA, 8%);
-          }
-          
-          .span4.col { text-align: center; }
-          
-          .left, .right { float: none; }
-          
-          .quotes {
-               .quote {
-                    img.img-circle {
-                         max-width: 50%;
-                    }
-                    
-                    a.span2, p, cite {
-                         text-align: center;
-                    }
-               }
-          }
+        &.services {
+            background-position-y: 0;
+        }
      }
+    
+    section.solutions-process {
+        .solution-item {
+            padding: 0 20px 20px;
+        }
+    }
+
+    section.solutions-feature {
+        img {
+            max-width: 100%;
+        }
+    }
      
      section.social, section.contact {
           padding: 20px 15px;
@@ -1141,5 +1111,9 @@ section.solutions-process {
     header {
         .nav-wrap ul { padding: 0;}
         .site-logo, .nav-wrap { padding: 0; }
+    }
+
+    section.focus-area.services {
+        background-position-y: 0;
     }
 }
