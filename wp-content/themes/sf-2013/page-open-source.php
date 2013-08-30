@@ -16,12 +16,14 @@ $repos = json_decode($repos);
 </section>
 
 <div class="container">
-	<section id="project-listing">
+	<section id="project-listing" class="row">
 	<?php foreach($repos->repositories as $repo) : ?>
 		<a href="<?php echo $repo->url; ?>" target="_blank">
-			<div class="project">
-				<h3><?php echo $repo->name; ?></h3>
-				<p><?php echo $repo->description; ?></p>
+			<div class=" col-lg-6 col-md-6 col-sm-6">
+				<div class="project">
+					<h3><?php echo $repo->name; ?></h3>
+					<p><?php echo $repo->description; ?></p>
+				</div>
 			</div>
 		</a>
 	<?php endforeach; ?>

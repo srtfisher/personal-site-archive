@@ -4,7 +4,7 @@
 		<h2 class="leading">Hi, my name is <span class="yellow">Sean Fisher</span></h2>
 		<p class="leading">I'm a full stack developer from New York City. My specialties including
 
-		WordPress, full stack development and custom application
+		WordPress, web design and custom application
 
 		development. I work with individuals and business to create amazing
 

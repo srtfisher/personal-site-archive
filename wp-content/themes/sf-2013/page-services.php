@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+add_filter('body_class', function($classes)
+{
+	$classes[] = 'darker-header';
+	return $classes;
+});
+get_header(); ?>
 <section class="focus-area services">
 	<div class="container">
 		<h2 class="leading">Are you doing the <span class="yellow">best</span> for your business?</h2>

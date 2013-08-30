@@ -13,7 +13,11 @@ h4,
 h5 {
   font-family: 'Open Sans', sans-serif;
 }
-header {
+body.darker-header #global-header {
+  -webkit-box-shadow: 0 -6px 20px black;
+  box-shadow: 0 -6px 20px black;
+}
+#global-header {
   background: white;
   padding: 20px 0;
   position: fixed;
@@ -24,58 +28,58 @@ header {
   -webkit-box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
   box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
 }
-header div.site-logo {
+#global-header div.site-logo {
   margin-top: 5px;
 }
-header div.site-logo a {
+#global-header div.site-logo a {
   display: block;
   color: black;
   font-size: 30px;
   font-weight: bold;
   padding: 9px 0;
 }
-header div.site-logo a:hover img {
+#global-header div.site-logo a:hover img {
   opacity: 80;
   filter: alpha(opacity=8000);
 }
-header nav {
+#global-header nav {
   float: right;
 }
-header nav ul {
+#global-header nav ul {
   margin: 0;
   list-style: none;
 }
-header nav ul:before,
-header nav ul:after {
+#global-header nav ul:before,
+#global-header nav ul:after {
   content: " ";
   display: table;
 }
-header nav ul:after {
+#global-header nav ul:after {
   clear: both;
 }
-header nav ul li {
+#global-header nav ul li {
   float: left;
   margin-right: 10px;
 }
-header nav ul li:last-child {
+#global-header nav ul li:last-child {
   margin-right: 0;
 }
-header nav ul li a {
+#global-header nav ul li a {
   display: block;
   padding: 24px 14px;
   font-size: 18px;
   color: #777;
   position: relative;
 }
-header nav ul li a:hover {
+#global-header nav ul li a:hover {
   color: #333;
   text-decoration: none;
 }
-header nav ul li.active a {
+#global-header nav ul li.active a {
   color: black;
   font-weight: bold;
 }
-header nav ul li.active .arrow {
+#global-header nav ul li.active .arrow {
   display: block;
 }
 h2.leading {
@@ -137,6 +141,14 @@ section.focus-area.services a:hover {
 section.focus-area.super-dark span.yellow,
 section.focus-area.services span.yellow {
   color: black;
+}
+section.focus-area.super-dark .leading,
+section.focus-area.services .leading {
+  text-shadow: 0 1px 0 black;
+}
+section.focus-area.super-dark .leading span.yellow,
+section.focus-area.services .leading span.yellow {
+  text-shadow: none;
 }
 section.focus-area.services {
   background: url('http://24.media.tumblr.com/10744cab3e8c4882fb64b6ae7f888a2f/tumblr_mrrad4hojD1st5lhmo1_1280.jpg');
@@ -901,14 +913,6 @@ section.blog article .content-wrap:after {
   section.single-work div.footer-container p.lead {
     text-align: center;
   }
-  section.single-work div.footer-container div.span4 {
-    float: none;
-    width: auto;
-    text-align: center;
-  }
-  section.single-work div.footer-container div.span4 .btn.btn-primary {
-    float: none;
-  }
   section.single-work div.work-featured,
   section.single-work div.work-sidebar {
     padding: 0 20px;
@@ -964,8 +968,9 @@ section.blog article .content-wrap:after {
   header nav ul li.active {
     background: rgba(0,0,0,0.1);
   }
-  header footer .span5 {
-    text-align: center !important;
+  #project-listing .project {
+    overflow: visible !important;
+    height: auto !important;
   }
 }
 .share-it {
@@ -987,6 +992,8 @@ section.blog article .content-wrap:after {
   box-shadow: 0 0 9px -4px rgba(0,0,0,0.76), inset 0 0 0px 1px white;
   padding: 20px;
   margin-bottom: 20px;
+  height: 125px;
+  overflow: hidden;
 }
 #project-listing .project:hover {
   border-color: #A8A8A8;
