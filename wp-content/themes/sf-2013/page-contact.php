@@ -81,6 +81,8 @@ get_header(); ?>
 </section>
 <?php
 define('SINGLE_PAGE', true);
+define('MESSAGE_TYPE', (isset($_GET['project'])) ? 'project' : 'message');
+
 get_template_part('contact-form', 'page');
 
 get_footer();

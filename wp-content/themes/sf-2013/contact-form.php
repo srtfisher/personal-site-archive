@@ -1,3 +1,5 @@
+<?php
+if (! defined('MESSAGE_TYPE')) define('MESSAGE_TYPE', 'message'); ?>
 <section class="contact" id="contact">
     <div class="container">
         <h3 class="section-title">Let's get in touch.</h3>
@@ -6,21 +8,21 @@
         <div class="alt-btns row">
             <div class="col-lg-3 col-md-3 col-sm-3 left col-lg-push-3 col-md-push-3 col-sm-push-3">
                 <p>Want to chat with me?</p>
-                <a href="#" data-type="message" class="btn btn-primary btn-lg btn-block">Send a Message</a>
+                <a href="#" data-type="message" class="btn btn-<?php echo (MESSAGE_TYPE == 'message') ? 'primary' : 'default'; ?> btn-lg btn-block">Send a Message</a>
             </div>
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-lg-push-3 col-md-push-3 col-sm-push-3">
                 <p>Want to work with me?</p>
-                <a href="#" data-type="project" class="btn btn-default btn-lg btn-block">Start a Project</a>
+                <a href="#" data-type="project" class="btn btn-<?php echo (MESSAGE_TYPE == 'project') ? 'primary' : 'default'; ?> btn-lg btn-block">Start a Project</a>
             </div>
         </div>
 
         <div class="row">
-        <form action="/contact" method="POST" class="contact-form" data-form-type="message" enctype="multipart/form-data">
+        <form action="/contact" method="POST" class="contact-form" data-form-type="message" enctype="multipart/form-data" <?php if (MESSAGE_TYPE !== 'message') echo'style="display:none;"'; ?>>
             <input type="hidden" name="type" value="message" />
 
             <div class="col-lg-6 col-md-6">
-                <textarea name="content" id="contact-textarea" <?php if (defined('SINGLE_PAGE')) echo 'autofocus'; ?> placeholder="What's on your mind?" class="form-control"></textarea>
+                <textarea name="content" id="contact-textarea" <?php if (defined('SINGLE_PAGE') AND MESSAGE_TYPE == 'message') echo 'autofocus'; ?> placeholder="What's on your mind?" class="form-control"></textarea>
             </div>
 
             <div class="col-lg-6 col-md-6">
@@ -40,7 +42,7 @@
         </form>
         </div>
         
-        <form action="/contact" method="POST" class="contact-form" data-form-type="project" enctype="multipart/form-data" style="display:none;">
+        <form action="/contact" method="POST" class="contact-form" data-form-type="project" enctype="multipart/form-data" <?php if (MESSAGE_TYPE !== 'project') echo'style="display:none;"'; ?>>
             <input type="hidden" name="type" value="project" />
             <input type="hidden" name="is-robot" id="is-robot" value="yes" />
 
@@ -48,7 +50,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-8 col-lg-push-2 col-md-push-2 col-sm-push-2" class="project-messages">
                     <div class="form-group">
                         <label for="your-name">Your Name</label>
-                        <input required type="text" name="your-name" id="your-name" placeholder="What's your name?" class="form-control name" />
+                        <input required type="text" name="your-name" id="your-name" placeholder="What's your name?" class="form-control name" <?php if (defined('SINGLE_PAGE') AND MESSAGE_TYPE == 'project') echo 'autofocus'; ?> />
                     </div>
 
                     <div class="form-group">
