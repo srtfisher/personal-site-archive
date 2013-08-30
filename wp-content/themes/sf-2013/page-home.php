@@ -1,14 +1,14 @@
 <?php get_header(); ?>    
-<section class="focus-area dark">
+<section class="focus-area dark home">
 	<div class="container">
 		<h2 class="leading">Hi, my name is <span class="yellow">Sean Fisher</span></h2>
-		<p class="leading">I'm a full stack developer from New York City. My specialties including
+		<p class="leading">I'm a full stack developer from New York City. My specialties include
 
 		WordPress, web design and custom application
 
-		development. I work with individuals and business to create amazing
+		development. I work with businesses to create incredible
 
-		Internet applications. <strong class="dark">Let me help create your idea today.</strong></p>
+		applications.<br /> <strong class="dark">Let me help create your idea today.</strong></p>
 
 		<div class="action-btns">
 			<div class="btn-group">
@@ -48,7 +48,7 @@
 				</div><div class="row">
 			<?php $cellCount = 0;
 			endif; ?>
-			<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 work-piece">
 				<a href="<?php the_permalink(); ?>">
 					<!--<img src="http://placehold.it/460x200" style="max-width:100%;" /> -->
 					<img src="<?php echo home_url().'/wp-content/themes/sf-2013/timthumb.php?src='.urlencode(get_post_meta(get_the_ID(), 'sf-image-small', TRUE)).'&w=460&h=200&a=t'; ?>" style="max-width:100%;" />

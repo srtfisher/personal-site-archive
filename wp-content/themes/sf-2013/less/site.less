@@ -254,6 +254,9 @@ input.form-control, textarea.form-control {
         padding: 0;
     }
     section.focus-area {
+        
+        &.home {padding: 130px 0 50px; }
+
         .action-btns .btn {
             display: block;
             width: 100%;
@@ -262,6 +265,12 @@ input.form-control, textarea.form-control {
 
         &.services {
             background-position-y: 0;
+        }
+
+        &.portfolio-listing {
+            .work-piece:first-child {
+                margin-bottom: 20px;
+            }
         }
      }
     
@@ -277,26 +286,8 @@ input.form-control, textarea.form-control {
         }
     }
      
-     section.social, section.contact {
+     section.contact {
           padding: 20px 15px;
-     }
-     
-     section.social {
-          ul.thumbnails {
-               .clearfix();
-               
-               li {
-                    max-width:40%;
-                    
-                    &:nth-child(odd) {
-                         float: left;
-                    }
-                    
-                    &:nth-child(even) {
-                         float: right;
-                    }
-               }
-          }
      }
      
      section.blog {
@@ -313,29 +304,22 @@ input.form-control, textarea.form-control {
                     }
                }
           }
-     }
+     }  
      
-     section.work {
-          div.overlay {
-               width: 80%;
-               left: 5%;
-          }
-     }
-     
-     section.contact form {
-          width: auto;
-          .clearfix ();
-          
-          input, textarea {
-               float: left;
-               width: 90%;
-          }
-          
-          input.email, input.name, input.subject {
-               width: 90%;
-          }
-     }
-     
+    section.contact form {
+        width: auto;
+        .clearfix ();
+
+        textarea, input {
+            margin: 0 0 14px;
+            width: 100%;
+        }
+    }
+
+    sectiom.contact .alt-contact {
+        line-height: 30px;
+    }
+
      section.single-work {
           div.container {
                width: auto;

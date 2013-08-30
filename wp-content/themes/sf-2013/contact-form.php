@@ -6,12 +6,12 @@ if (! defined('MESSAGE_TYPE')) define('MESSAGE_TYPE', 'message'); ?>
         <h4 class="section-sub">We should be in touch. Shoot Sean an email below and he'll get back to you within <strong class="tipsy" title="That is, of course, if I'm not away on a much needed vacation!">one day</strong>.</h4>
         
         <div class="alt-btns row">
-            <div class="col-lg-3 col-md-3 col-sm-3 left col-lg-push-3 col-md-push-3 col-sm-push-3">
+            <div class="col-lg-3 col-md-3 col-sm-4 left col-lg-push-3 col-md-push-3 col-sm-push-2">
                 <p>Want to chat with me?</p>
                 <a href="#" data-type="message" class="btn btn-flat btn-<?php echo (MESSAGE_TYPE == 'message') ? 'primary' : 'default'; ?> btn-lg btn-block">Send a Message</a>
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-3 col-lg-push-3 col-md-push-3 col-sm-push-3">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-lg-push-3 col-md-push-3 col-sm-push-2">
                 <p>Want to work with me?</p>
                 <a href="#" data-type="project" class="btn btn-flat btn-<?php echo (MESSAGE_TYPE == 'project') ? 'primary' : 'default'; ?> btn-lg btn-block">Start a Project</a>
             </div>
