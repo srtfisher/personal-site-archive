@@ -106,25 +106,43 @@ section.focus-area {
 section.focus-area.dark {
   background: #F4F4F4;
 }
-section.focus-area.super-dark {
+section.focus-area.super-dark,
+section.focus-area.services {
   background: #2980b9;
 }
 section.focus-area.super-dark h1,
 section.focus-area.super-dark h2,
 section.focus-area.super-dark h3,
-section.focus-area.super-dark h4 p {
+section.focus-area.super-dark h4 p,
+section.focus-area.services h1,
+section.focus-area.services h2,
+section.focus-area.services h3,
+section.focus-area.services h4 p {
   color: white;
 }
-section.focus-area.super-dark p {
+section.focus-area.super-dark p,
+section.focus-area.services p {
   color: #f2f2f2;
 }
-section.focus-area.super-dark a {
+section.focus-area.super-dark a,
+section.focus-area.services a {
   color: white;
   text-decoration: none;
   border-bottom: 1px dashed rgba(255,255,255,0.3);
 }
-section.focus-area.super-dark a:hover {
+section.focus-area.super-dark a:hover,
+section.focus-area.services a:hover {
   border-bottom-color: white;
+}
+section.focus-area.super-dark span.yellow,
+section.focus-area.services span.yellow {
+  color: black;
+}
+section.focus-area.services {
+  background: url('http://24.media.tumblr.com/10744cab3e8c4882fb64b6ae7f888a2f/tumblr_mrrad4hojD1st5lhmo1_1280.jpg');
+  background-size: cover;
+  padding: 150px 0;
+  background-position-y: -271px;
 }
 section.focus-area p.leading {
   text-align: center;
@@ -1003,6 +1021,24 @@ section.blog article .content-wrap:after {
   font-size: 15px;
   line-height: 20px;
   margin: 0;
+}
+section.solutions-process {
+  margin-top: 25px;
+}
+section.solutions-process p.leading {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto 50px;
+}
+section.solutions-process .solution-item {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+section.solutions-process .solution-item h4 {
+  font-weight: bold;
+}
+section.solutions-process .solution-item p {
+  font-size: 15px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header .site-logo img {

@@ -122,7 +122,7 @@ section.focus-area {
     padding: 100px 0;
     
     &.dark { background: #F4F4F4; }
-    &.super-dark {
+    &.super-dark, &.services {
         background: #2980b9;
 
         h1, h2, h3, h4 p { color: white; }
@@ -140,7 +140,17 @@ section.focus-area {
                 border-bottom-color: white;
             }
         }
+
+        span.yellow { color: black; }
     }
+
+    &.services {
+        background: url('http://24.media.tumblr.com/10744cab3e8c4882fb64b6ae7f888a2f/tumblr_mrrad4hojD1st5lhmo1_1280.jpg');
+        background-size: cover;
+        padding: 150px 0;
+        background-position-y: -271px;
+    }
+
     p.leading {
         text-align: center;
         font-family: @fontsans;
@@ -1043,6 +1053,29 @@ section.blog {
             font-size:15px;
             line-height: 20px;
             margin: 0;
+        }
+    }
+}
+
+section.solutions-process {
+    margin-top: 25px;
+
+    p.leading {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto 50px;
+    }
+
+    .solution-item {
+        text-align: center;
+        font-family: @fontsans;
+
+        h4 {
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 15px;
         }
     }
 }
