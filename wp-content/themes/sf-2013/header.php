@@ -25,7 +25,7 @@
     <header class="<?php if (is_front_page()) echo 'loading'; ?>" id="global-header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 site-logo">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 site-logo" id="nav-logo">
                     <a href="<?=home_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
                 </div>
                 

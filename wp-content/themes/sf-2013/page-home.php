@@ -118,6 +118,11 @@ $('#nav-work a').click(function(e)
 	scrollTo('#work');
 });
 
+$('#nav-home a, #nav-logo a').click(function(e)
+{
+	e.preventDefault();
+	scrollTo('body');
+});
 <?php
 });
 
