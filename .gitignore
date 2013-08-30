@@ -13,6 +13,7 @@
 /wp-content/themes/*
 !/wp-content/themes/sf-2012/
 !/wp-content/themes/sf-2013/
+wp-content/themes/sf-2013/css/site.css
 
 !/wp-content/plugins/
 /wp-content/plugins/*
