@@ -33,7 +33,7 @@ body.darker-header #global-header {
 }
 #global-header {
     background: white;
-    padding: 20px 0;
+    padding: 8px 0;
     position: fixed;
     top:0;
     width: 100%;
@@ -52,6 +52,7 @@ body.darker-header #global-header {
         }
     }
     
+    .dropdown-toggle { display: none; }
     nav {
         float: right;
         
@@ -95,7 +96,7 @@ body.blog #nav-blog a {
 }
 
 section.focus-area {
-    padding: 100px 0;
+    padding: 65px 0;
     
     &.dark { background: #F4F4F4; }
     &.super-dark, &.services {
@@ -130,7 +131,6 @@ section.focus-area {
         background: url('../img/services-bg.jpg');
         background-size: cover;
         padding: 150px 0;
-        background-position-y: -271px;
     }
 
     p.leading {
@@ -302,9 +302,11 @@ section.about-panels {
     body {
         padding: 0;
     }
+    .dropdown-toggle { display: block !important; float:right; }
+    .navbar-toggle { display: block !important; }
     section.focus-area {
         
-        &.home {padding: 130px 0 50px; }
+        &.home {padding: 20px 0 50px; }
 
         .action-btns .btn {
             display: block;
@@ -398,10 +400,6 @@ section.about-panels {
 
         div.site-logo {
             margin: 0;
-            
-            a {
-                //padding: 10px 0 15px;
-            }
 
             img {
                 max-width: 100%;
@@ -425,10 +423,12 @@ section.about-panels {
         }
     
         .nav-wrap {
-            display: none; padding: 0;
+            display: none;
+            padding: 0;
             margin: 0;
             position: static;
             top: 60px;
+            width: 100%;
         }
 
         nav {
@@ -436,7 +436,7 @@ section.about-panels {
             width: auto;
             
             ul {
-                margin: 0 0 10px; padding: 0;
+                margin: 0; padding: 0;
 
                 li {
                     float: none;
@@ -471,8 +471,12 @@ section.about-panels {
     background: rgba(100, 100, 100, 0.04);
 }
 
-@media (min-width: @screen-sm) and (max-width: @screen-md) {
+@media (min-width: (@screen-sm)) and (max-width: @screen-md) {
     #global-header {
+        .dropdown-toggle {
+            display: block !important;
+        }
+        .navbar-toggle { display: block !important; }
         .site-logo img { max-width: 100%; }
         .nav-wrap ul { padding: 0;}
         .site-logo, .nav-wrap { padding: 0; }
@@ -494,6 +498,23 @@ section.about-panels {
 
 // Only for large displays
 @media (min-width: @screen-lg) {
+
+    #global-header {
+        padding: 20px 0;
+    }
+    
+    section.focus-area {
+        padding: 100px 0;
+
+        &.services {
+            background-position-y: -271px;
+        }
+
+        &.portfolio-listing {
+            padding-top: 50px;
+        }
+    }
+
     section.about-panels {
 
         .row {

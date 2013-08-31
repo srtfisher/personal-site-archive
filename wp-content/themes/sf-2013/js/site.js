@@ -5,12 +5,12 @@
 var SF = {};
 
 $(document).ready(function () {
-    window.scroll(0,0)
+    window.scrollTo(0, 1);
     
     $('#nav-toggle').click(function()
     {
         console.log('click');
-        $('.nav-wrap').slideToggle()
+        $('.nav-wrap').slideToggle();
     });
 
     $('.btn[data-type]').click(function(e)
@@ -65,16 +65,9 @@ $(document).ready(function () {
     $('#contact-btn').popover();
 });
 
-SF.showContactMessage = function() {
-
-};
-
-SF.showProjectMessage = function() {
-
-};
-
-function scrollTo(id)
+function scrollToId(id)
 {
+    console.log(id);
     offset = $('#global-header').height() + 10;
      $('html,body').animate({
           scrollTop: ( $(id).offset().top)-offset

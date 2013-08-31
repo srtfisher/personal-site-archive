@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?php
 	wp_title('|', true, 'right');
 	bloginfo('name');
@@ -28,8 +28,9 @@
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 site-logo" id="nav-logo">
                     <a href="<?=home_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
                 </div>
-                
-                <div class="dropdown-toggle visible-xs col-xs-5">
+
+                <div class="dropdown-toggle col-xs-5">
+
                     <button class="navbar-toggle" id="nav-toggle" type="button">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>

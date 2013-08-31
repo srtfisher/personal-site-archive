@@ -104,12 +104,12 @@ Have an idea you'd like to see in reality? We'll make it happen. Building out an
 add_action('jquery_load', function() {
 ?>
 
-if (location.hash == '#work') scrollTo('#work');
+if (location.hash == '#work') scrollToId('#work');
 
 $('#nav-contact a, #spotlight-contact').click(function(e)
 {
 	e.preventDefault();
-	scrollTo('#contact');
+	scrollToId('#contact');
 	$('#contact-textarea').focus();
 	
 	_gaq.push(['_trackEvent', 'Button', 'Click', $(this).data('medium')]);
@@ -118,14 +118,16 @@ $('#nav-contact a, #spotlight-contact').click(function(e)
 $('#nav-work a').click(function(e)
 {
 	e.preventDefault();
-	scrollTo('#work');
+	scrollToId('#work');
 });
 
 $('#nav-home a, #nav-logo a').click(function(e)
 {
 	e.preventDefault();
-	scrollTo('body');
+	scrollToId('body');
 });
+
+$('span.yellow').text($(window).width());
 <?php
 });
 
