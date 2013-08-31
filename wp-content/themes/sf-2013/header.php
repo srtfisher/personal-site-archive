@@ -11,11 +11,7 @@
 		echo " | $site_description";
 	?></title>
 
-<?php
-	if (is_singular() && get_option('thread_comments'))
-		wp_enqueue_script('comment-reply');
-	wp_head();
-?>
+<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
