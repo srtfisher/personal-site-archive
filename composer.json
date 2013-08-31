@@ -18,7 +18,12 @@
 		"wpackagist/disable-wordpress-plugin-updates": "dev-master",
 		"wpackagist/wordpress-importer": "*",
 		"wpackagist/syntaxhighlighter": "*",
-		"wpackagist/lockdown-wp-admin": "*"
+		"wpackagist/lockdown-wp-admin": "*",
+		"wpackagist/google-sitemap-generator": "*",
+		"wpackagist/google-analyticator": "*",
+		"wpackagist/hotfix": "*",
+		"wpackagist/w3-total-cache": "*",
+		"wpackagist/wp-facebook-open-graph-protocol": "*"
 	},
 	"scripts": {
 		"post-update-cmd": "php on-deploy.php",
