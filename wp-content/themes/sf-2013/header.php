@@ -46,7 +46,7 @@
                             <li id="nav-services" <?php if (get_the_title() == 'Services' ) echo 'class="active"'; ?>><a href="<?=home_url('services')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=services">Services</a></li>
                             <li id="nav-work"><a href="<?=home_url('')?>#work" data-target="#work">Portfolio</a></li>
                             <li id="nav-blog" <?php if (get_the_title() == 'Blog' ) echo 'class="active"'; ?>><a href="<?=home_url('blog')?>">Blog</a></li>
-                            <li id="nav-contact"><a href="<?=home_url('contact')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=contact" data-target="#contact" data-medium="header">Contact Me</a></li>
+                            <li id="nav-contact" <?php if (get_the_title() == 'Contact' ) echo 'class="active"'; ?>><a href="<?=home_url('contact')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=contact" data-target="#contact" data-medium="header">Contact Me</a></li>
                         </ul>
                     </nav>
                 </div>
