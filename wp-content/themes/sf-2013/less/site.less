@@ -264,7 +264,31 @@ section.about-grey {
             }
         }
     }
+}
 
+section.about-panels {
+    padding: 50px 0;
+    font-family: @fontsans;
+
+    .row {
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        .panel-info {
+            p {
+                font-size: 16px;
+                line-height: 25px;
+                color: #888;
+            }
+        }
+
+        .panel-media {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 @import 'sections/work-listing.less';
