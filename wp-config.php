@@ -2,13 +2,10 @@
 if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 	define( 'WP_LOCAL_DEV', true );
 	include( dirname( __FILE__ ) . '/local-config.php' );
+} elseif (file_exists(__DIR__.'/database-config.php')) {
+	include __DIR__.'/database-config.php';
 } else {
-	define('DB_NAME', 'sf');
-	define('DB_USER', 'root');
-	define('DB_PASSWORD', 'staw8R9t');
-	define('DB_HOST', 'localhost');
-	define('DB_CHARSET', 'utf8');
-	define('DB_COLLATE', '');
+	die('No database config exists.');
 }
 
 // ========================
