@@ -5,6 +5,8 @@
 var SF = {};
 
 $(document).ready(function () {
+    window.scroll(0,0)
+    
     $('#nav-toggle').click(function()
     {
         $('.nav-wrap').slideToggle()

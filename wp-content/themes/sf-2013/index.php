@@ -31,7 +31,7 @@
             </article>
         <?php endwhile; endif; ?>
         
-        <?php wp_pagenavi(); ?>
+        <div class="wp-pagenavi-wrap"><?php wp_pagenavi(); ?></div>
     </div>
 </section>
 
