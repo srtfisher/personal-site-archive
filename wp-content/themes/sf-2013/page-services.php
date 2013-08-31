@@ -21,21 +21,21 @@ get_header(); ?>
 				<img src="http://placehold.it/150x150" class="img-circle" />
 
 				<h4>Finding out what is perfect for you.</h4>
-				<p>We listen to what you want to build out. Using years of experience, we'll help tailor your product to recieve its maxium value.</p>
+				<p>We listen to what you want to build out. Using years of experience, I'll help tailor your product to recieve its maxium value.</p>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 solution-item">
 				<img src="http://placehold.it/150x150" class="img-circle" />
 
 				<h4>Build out a incredible product.</h4>
-				<p>Using modern technologies, we'll build our your product and communicate clearly with you about it's progress. As the product evolves from start to finish, the client is involved entirely.</p>
+				<p>Using modern technologies, I'll build our your product and communicate clearly with you about it's progress. As the product evolves from start to finish, the client is involved entirely.</p>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 solution-item">
 				<img src="http://placehold.it/150x150" class="img-circle" />
 
 				<h4>Deploy and ensure continued happiness.</h4>
-				<p>Once we've built out an incredible product, we'll deploy it and ensure you are set on your feet. After it is already launched, we will do a final check to ensure the client's ultimate satisfaction.</p>
+				<p>Once we've built out an incredible product, I'll deploy it and ensure you are set on your feet. After it is already launched, we will do a final check to ensure the client's ultimate satisfaction.</p>
 			</div>
 		</div>		
 	</div>
@@ -44,15 +44,19 @@ get_header(); ?>
 <section class="solutions-feature">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4">
-				<h3 class="leading">A better way to manage a construction job.</h3>
-				<p class="section-info">Ut ut tellus bibendum, volutpat erat et, ullamcorper erat. Pellentesque sit amet tellus eget tortor ullamcorper scelerisque sit amet eu justo. Praesent ac turpis nec erat faucibus mollis. Morbi ultrices mauris ac nisl pharetra, a facilisis dolor ultrices.</p>
+			<div class="col-lg-4 col-md-4 col-sm-4">
+				<h3 class="leading">We'll handle all of the grunt work so you don't have to.</h3>
+				<p class="section-info">
+Our years of experience don't go unused. To ensure your product is the best it can be, I can work with you to build an amazing solution customized just for you. From a business website to a custom build application, the sky is the limit.
+				</p>
 
-				<p class="section-info">Ut ut tellus bibendum, volutpat erat et, ullamcorper erat. Pellentesque sit amet tellus eget tortor ullamcorper scelerisque sit amet eu justo. Praesent ac turpis nec erat faucibus mollis. Morbi ultrices mauris ac nisl pharetra, a facilisis dolor ultrices.</p>
+				<p class="section-info">
+I've built out hundreds of applications and know a thing or two about what works and what doesn't. We will build you the application of your dreams. Your product is in good hands.
+				</p>
 			</div>
 
-			<div class="col-lg-7 col-md-7 col-lg-push-1 col-md-push-1">
-				<img src="http://placehold.it/700x500">
+			<div class="col-lg-7 col-md-7 col-sm-8 col-lg-push-1 col-md-push-1">
+				<img src="http://seanfisher.co/wp-content/uploads/2013/08/dashboard-welcome.png">
 			</div>
 		</div>	
 	</div>
@@ -61,10 +65,23 @@ get_header(); ?>
 <section class="solutions-feature center-feature">
 	<div class="container">
 		<h2 class="leading">Your ideas today. Reality tomorrow.</h2>
-		<p class="leading">Let's put your ideas to action. While working with you to find the best solution, we'll ensure that you're overly satified.</p>
+		<p class="leading">Let's put your ideas to action. While working with you to find the best solution, I'll ensure that you're overly satified.</p>
 		
-		<div class="media-wrap">
-			<img src="http://placehold.it/700x400">
+		<div class="row panel-media">
+			<div class="col-lg-9 col-md-9 col-sm-9 col-fix">
+				
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<img src="http://seanfisher.co/wp-content/uploads/2013/08/wp-services.png" />
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<img src="http://seanfisher.co/wp-content/uploads/2013/08/laravel-services.png" />
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+						<img src="http://seanfisher.co/wp-content/uploads/2013/08/ci-services.png" />
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

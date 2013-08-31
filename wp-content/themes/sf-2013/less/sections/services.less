@@ -28,7 +28,11 @@ section.solutions-process {
     h3.leading {
         font-weight: 600;
     }
-
+    
+    img {
+        max-width: 100%;
+    }
+    
     .section-info {
         font-family: @fontsans;
         margin: 1em 0;
@@ -44,10 +48,16 @@ section.solutions-process {
 
         p.leading { width: 80%; margin: 0 auto; }
 
-        .media-wrap {
+        .panel-media {
+            margin-top: 20px;
+            margin-bottom: 20px;
             text-align: center;
-            margin: 40px auto 0;
-            img { max-width: 100%;}
+
+            .col-fix {
+                margin: 0 auto;
+                float: none;
+            }
+            img { max-width: 95%;}
         }
     }
 
