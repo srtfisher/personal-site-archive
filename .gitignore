@@ -2,6 +2,7 @@
 !/wp
 !/*.php
 /local-config.php
+/database-config.php
 !/composer.json
 !/.git*
 
