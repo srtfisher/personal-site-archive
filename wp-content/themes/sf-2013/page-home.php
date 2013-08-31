@@ -70,23 +70,23 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-4 service-item">
-				<h3>Full Stack Design</h3>
+				<h3>Interface Design</h3>
 				<p>
-Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
+From a business website to a mobile application, we'll find what works best to make sure your visitors are never lost.
 </p>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 service-item">
-				<h3>Full Stack Design</h3>
+				<h3>Content Management</h3>
 				<p>
-Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
+Building out a website for your business is no problem. Using a CMS such as WordPress, we'll create you a website of your dreams. Alot of people need to manage it? We've got that covered.
 </p>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 service-item">
-				<h3>Full Stack Design</h3>
+				<h3>Application Development</h3>
 				<p>
-Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet neque, vitae dapibus turpis feugiat a. Morbi tempus lacus risus, non eleifend nulla.
+Have an idea you'd like to see in reality? We'll make it happen. Building out anything is possible. We've worked and created various products for businesses that vary greatly.
 </p>
 			</div>
 
