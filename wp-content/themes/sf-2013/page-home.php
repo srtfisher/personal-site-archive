@@ -103,6 +103,10 @@ Suspendisse a sapien nulla. Sed id iaculis lacus. Praesent scelerisque imperdiet
 <?php 
 add_action('jquery_load', function() {
 ?>
+if (location.hash == '#work') {
+	scrollTo('#work');
+}
+
 $('#nav-contact a, #spotlight-contact').click(function(e)
 {
 	e.preventDefault();
