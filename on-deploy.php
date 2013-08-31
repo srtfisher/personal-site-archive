@@ -8,7 +8,7 @@ require_once (__DIR__.'/wordpress/wp-load.php');
 require_once(  __DIR__ . '/wordpress/wp-admin/includes/plugin.php');
 
 $plugins = [
-	'akismet/akismet.php',
+	//'akismet/akismet.php',
 	//'composer/composer.php',
 	'disqus-comment-system/disqus.php',
 	'jetpack/jetpack.php',
