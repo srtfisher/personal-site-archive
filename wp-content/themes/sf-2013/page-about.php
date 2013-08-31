@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="col-lg-8 col-md-8 col-sm-10 about-panel">
 			<div class="panel-wrap">
-				<img src="http://placehold.it/730x324" class="large-focus" />
+				<img src="http://seanfisher.co/wp-content/uploads/2013/08/Profile-730.jpg" class="large-focus" />
 
 				<div class="inner">
 					<h3 class="leading">About Sean Fisher</h3>
@@ -27,7 +27,7 @@
 				<p class="leading"><a href="<?php echo home_url('work/teens-in-tech-labs'); ?>">More Information</a></p>
 			</div>
 
-			<div class="col-lg-8 col-md-8-sm-8 panel-media">
+			<div class="col-lg-8 col-md-8 col-sm-8 panel-media">
 				<img src="http://seanfisher.co/wp-content/uploads/2012/08/teens-in-tech.jpg" />
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 				<p class="leading"><a href="<?php echo home_url('work/truanttoday'); ?>">More Information</a></p>
 			</div>
 
-			<div class="col-lg-8 col-md-8-sm-8 panel-media">
+			<div class="col-lg-8 col-md-8 col-sm-8 panel-media">
 				<img src="http://seanfisher.co/wp-content/uploads/2012/08/truanttoday.jpg" />
 			</div>
 		</div>

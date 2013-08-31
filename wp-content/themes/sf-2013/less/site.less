@@ -271,8 +271,6 @@ section.about-panels {
     font-family: @fontsans;
 
     .row {
-        height: 300px;
-        overflow: hidden;
         margin-bottom: 50px;
 
         .panel-info {
@@ -326,6 +324,10 @@ section.about-panels {
                 margin-bottom: 20px;
             }
         }
+     }
+
+     section.about-grey {
+        padding-top: 150px;
      }
     
     section.solutions-process {
@@ -480,8 +482,20 @@ section.about-panels {
             }
         }
     }
-
+    
     section.focus-area.services {
         background-position-y: 0;
+    }
+}
+
+
+// Only for large displays
+@media (min-width: @screen-lg) {
+    section.about-panels {
+
+        .row {
+            height: 300px;
+            overflow: hidden;
+        }
     }
 }
