@@ -15,7 +15,7 @@
 !/wp-content/themes/sf-2012/
 !/wp-content/themes/sf-2013/
 wp-content/themes/sf-2013/css/site.css
-
+wp-content/themes/sf-2013/cache/
 !/wp-content/plugins/
 /wp-content/plugins/*
 !/wp-content/plugins/index.php
