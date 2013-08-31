@@ -3,13 +3,15 @@
 <section class="about-grey">
 	<div class="container">
 		<div class="col-lg-8 col-md-8 col-sm-10 about-panel">
-			<img src="http://placehold.it/900x400" class="large-focus" />
+			<div class="panel-wrap">
+				<img src="http://placehold.it/900x400" class="large-focus" />
 
-			<div class="inner">
-				<h3 class="leading">About Sean Fisher</h3>
-				<p class="leading">Full Stack Developer, Entrepreneur, Explorer.</p>
-				<div class="copy">
-					<p>Sean has <?php echo (date('Y')-2007); ?> years of experience organizing and building innovative applications. With a background in full stack development, he has worked in various startups, building out their technology and ensuring the visitors that their experience would perfect. Though he is currently working for a major in Web and Information Systems, Sean is also an Eagle Scout. When not pondering or developing, he can be found outdoors hiking.</p>  
+				<div class="inner">
+					<h3 class="leading">About Sean Fisher</h3>
+					<p class="leading">Full Stack Developer, Entrepreneur, Explorer.</p>
+					<div class="copy">
+						<p>Sean has <?php echo (date('Y')-2007); ?> years of experience organizing and building innovative applications. With a background in full stack development, he has worked in various startups, building out their technology and ensuring the visitors that their experience would perfect. Though he is currently working for a major in Web and Information Systems, Sean is also an Eagle Scout. When not pondering or developing, he can be found outdoors hiking.</p>  
+					</div>
 				</div>
 			</div>
 		</div>
