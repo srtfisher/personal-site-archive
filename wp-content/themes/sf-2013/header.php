@@ -11,14 +11,11 @@
 		echo " | $site_description";
 	?></title>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js"></script>
 <?php
 	if (is_singular() && get_option('thread_comments'))
 		wp_enqueue_script('comment-reply');
 	wp_head();
 ?>
-    <link href='http://fonts.googleapis.com/css?family=Cutive|Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body <?php body_class(); ?>>

@@ -130,6 +130,8 @@ add_action('save_post', function($post_id)
 **/
 function sf_enqueue()
 {
+    wp_register_script('modernizer', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js', array(), '2.6.1');
+    wp_enqueue_script('modernizr');
     // Fix jQuery to load from Google's CDN
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2');
@@ -142,19 +144,24 @@ function sf_enqueue()
     // Enqueue Javascript
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
-    //wp_enqueue_script('jquery.transit');
     wp_enqueue_script('sf-2013');
     
     // Compile the LESS into CSS!
     $less = new lessc;
-    $less->compileFile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
+
+    if (defined('WP_LOCAL_DEV') AND WP_LOCAL_DEV)
+        $less->compileFile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
+    else
+        $less->checkedCompile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
     
     // CSS -- checkedCompile
     wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css');
     wp_register_style('sf-2013', get_template_directory_uri().'/css/site.css');
-    
+    wp_register_style('sf-2013-font', 'http://fonts.googleapis.com/css?family=Cutive|Open+Sans:400italic,400,700,300');
+
     wp_enqueue_style('bootstrap');
     wp_enqueue_style('sf-2013');
+    wp_enqueue_style('sf-2013-font');
 
     wp_register_style('syntaxhighlighter-theme-journeys', get_template_directory_uri().'/css/syntax.css',
         array( 'syntaxhighlighter-core' ), '1.2.3'
