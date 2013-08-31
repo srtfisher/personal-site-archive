@@ -237,6 +237,34 @@ input.form-control, textarea.form-control {
     }
 }
 
+section.about-grey {
+    background: #f1f0ee;
+    padding: 100px 0 50px;
+
+    .about-panel {
+        margin: 0 auto;
+        float: none;
+        font-family: @fontsans;
+        
+        img.large-focus {
+            max-width: 100%;
+        }
+
+        .inner {
+            background: white;
+            padding: 20px 30px;
+
+            .copy {
+                p {
+                    font-size: 16px;
+                    margin: 0 0 1em;
+                }
+            }
+        }
+    }
+
+}
+
 @import 'sections/work-listing.less';
 @import 'sections/what-i-work-on.less';
 @import 'sections/contact.less';

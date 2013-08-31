@@ -31,7 +31,10 @@
             </article>
         <?php endwhile; endif; ?>
         
-        <div class="wp-pagenavi-wrap"><?php wp_pagenavi(); ?></div>
+        <?php if (! is_single() AND ! is_page()) wp_pagenavi([
+        'before' => '<div class="wp-pagenavi-wrap">',
+        'after' => '</div>'
+        ]); ?>
     </div>
 </section>
 
