@@ -126,8 +126,6 @@ $('#nav-home a, #nav-logo a').click(function(e)
 	e.preventDefault();
 	scrollToId('body');
 });
-
-$('span.yellow').text($(window).width());
 <?php
 });
 
