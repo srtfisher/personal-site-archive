@@ -18,21 +18,21 @@ get_header(); ?>
 		<p class="leading">Working around your needs, we ensure maximum happiness.</p>
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-4 solution-item">
-				<img src="http://placehold.it/150x150" class="img-circle" />
+				<img src="<?php bloginfo('template_url'); ?>/img/step-one.png"  />
 
 				<h4>Finding out what is perfect for you.</h4>
 				<p>We listen to what you want to build out. Using years of experience, I'll help tailor your product to recieve its maxium value.</p>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 solution-item">
-				<img src="http://placehold.it/150x150" class="img-circle" />
+				<img src="<?php bloginfo('template_url'); ?>/img/step-two.png"  />
 
 				<h4>Build out a incredible product.</h4>
 				<p>Using modern technologies, I'll build our your product and communicate clearly with you about it's progress. As the product evolves from start to finish, the client is involved entirely.</p>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 solution-item">
-				<img src="http://placehold.it/150x150" class="img-circle" />
+				<img src="<?php bloginfo('template_url'); ?>/img/step-three.png"  />
 
 				<h4>Deploy and ensure continued happiness.</h4>
 				<p>Once we've built out an incredible product, I'll deploy it and ensure you are set on your feet. After it is already launched, we will do a final check to ensure the client's ultimate satisfaction.</p>
