@@ -2,7 +2,7 @@
 
 <section class="about-grey">
 	<div class="container">
-		<div class="col-lg-8 col-md-8 col-sm-10 about-panel">
+		<div class="col-lg-8 col-md-8 col-sm-12 about-panel">
 			<div class="panel-wrap">
 				<img src="http://seanfisher.co/wp-content/uploads/2013/08/Profile-730.jpg" class="large-focus" />
 

@@ -15,35 +15,30 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class="<?php if (is_front_page()) echo 'loading'; ?>" id="global-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-7 site-logo" id="nav-logo">
-                    <a href="<?=home_url()?>"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
-                </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="global-nav">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!--<a class="navbar-brand" href="#">Brand</a>-->
+        <a href="<?=home_url()?>" class="site-logo"><img src="<?=get_template_directory_uri()?>/img/logo.png" /></a>
+    </div>
 
-                <div class="dropdown-toggle col-xs-5">
-
-                    <button class="navbar-toggle" id="nav-toggle" type="button">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                </div>
-
-                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 nav-wrap clearfix">
-                    <nav id="site-nav-wrap">
-                        <ul id="site-nav">
-                            <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=home_url('')?>" data-target="#spotlight">Home</a></li>
-                            <li id="nav-about" <?php if (get_the_title() == 'About' ) echo 'class="active"'; ?>><a href="<?=home_url('about')?>" data-target="#about">About Me</a></li>
-                            <li id="nav-services" <?php if (get_the_title() == 'Services' ) echo 'class="active"'; ?>><a href="<?=home_url('services')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=services">Services</a></li>
-                            <li id="nav-work"><a href="<?=home_url('')?>#work" data-target="#work">Portfolio</a></li>
-                            <li id="nav-blog" <?php if (get_the_title() == 'Blog' ) echo 'class="active"'; ?>><a href="<?=home_url('blog')?>">Blog</a></li>
-                            <li id="nav-contact" <?php if (get_the_title() == 'Contact' ) echo 'class="active"'; ?>><a href="<?=home_url('contact')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=contact" data-target="#contact" data-medium="header">Contact Me</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        
+        <ul class="nav navbar-nav navbar-right">
+            <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=home_url('')?>" data-target="#spotlight">Home</a></li>
+            <li id="nav-about" <?php if (get_the_title() == 'About' ) echo 'class="active"'; ?>><a href="<?=home_url('about')?>" data-target="#about">About Me</a></li>
+            <li id="nav-services" <?php if (get_the_title() == 'Services' ) echo 'class="active"'; ?>><a href="<?=home_url('services')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=services">Services</a></li>
+            <li id="nav-work"><a href="<?=home_url('')?>#work" data-target="#work">Portfolio</a></li>
+            <li id="nav-blog" <?php if (get_the_title() == 'Blog' ) echo 'class="active"'; ?>><a href="<?=home_url('blog')?>">Blog</a></li>
+            <li id="nav-contact" <?php if (get_the_title() == 'Contact' ) echo 'class="active"'; ?>><a href="<?=home_url('contact')?>/?utm_source=seanfisherco&utm_medium=link&utm_content=header&utm_campaign=contact" data-target="#contact" data-medium="header">Contact Me</a></li>
+            </li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>

@@ -24,13 +24,46 @@ h1, h2, h3, h4, h5 {
     font-family: @fontsans;
 }
 
-body.darker-header #global-header {
+body.darker-header #global-nav {
     .box-shadow  (0 -6px 20px black);
 }
 .nav-a-active () {
     color: black;
     font-weight: bold;
+    background: none;
 }
+
+#global-nav {
+    background: white;
+    padding: 15px 0;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    .box-shadow (0 -6px 20px rgba(0,0,0,0.2));
+
+    ul.nav {
+        li {
+            margin-right: 10px;
+
+            a {
+                padding: 24px 18px;
+                font-size: 18px;
+                color: #777;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+            &.active a {
+                .nav-a-active ();
+            }
+        }
+    }
+}
+    
 #global-header {
     background: white;
     padding: 8px 0;
@@ -91,7 +124,7 @@ body.darker-header #global-header {
     
 } // Header
 
-body.blog #nav-blog a {
+body.blog ul.nav #nav-blog a {
     .nav-a-active;
 }
 
@@ -306,7 +339,7 @@ section.about-panels {
     .navbar-toggle { display: block !important; }
     section.focus-area {
         
-        &.home {padding: 20px 0 50px; }
+        &.home {padding: 75px 0 50px; }
 
         .action-btns .btn {
             display: block;
@@ -315,7 +348,7 @@ section.about-panels {
         }
 
         &.services {
-            background-position-y: 0;
+            padding: 100px 0;
         }
 
         &.portfolio-listing {
@@ -324,10 +357,11 @@ section.about-panels {
             }
         }
      }
-
-     section.about-grey {
-        padding-top: 150px;
-     }
+    
+    // Top of about page
+    section.about-grey {
+        padding-top: 100px;
+    }
     
     section.solutions-process {
         .solution-item {
@@ -393,69 +427,14 @@ section.about-panels {
                padding: 0 20px;
           }
      }
-     
-    #global-header {
-        padding: 0;
-        position: static;
-
-        div.site-logo {
-            margin: 0;
-
-            img {
-                max-width: 100%;
-                height: 55px;
-            }
-        }
-
-        button.navbar-toggle {
-            border-color: rgba(0, 0, 0, 0.1);
-            padding: 15px;
-
-            .icon-bar {
-                background-color: black;
-            }
-
-            &:focus {
-                outline: none;
-                .box-shadow (none);
-                border-color: rgba(0, 0, 0, 0.5);
-            }
-        }
     
-        .nav-wrap {
-            display: none;
-            padding: 0;
-            margin: 0;
-            position: static;
-            top: 60px;
-            width: 100%;
+    #global-nav {
+        padding: 10px 0;
+
+        .site-logo img {
+            height: 50px;
         }
-
-        nav {
-            float: none;
-            width: auto;
-            
-            ul {
-                margin: 0; padding: 0;
-
-                li {
-                    float: none;
-                    margin: 0;
-                    padding: 0 15px;
-
-                    a {
-                        text-align: left;
-                        padding: 10px;
-                        font-size: 17px;
-                    }
-
-                    &.active {
-                        background: rgba(0,0,0,0.1);
-                    }
-                }
-            }
-        }
-    }//header
+    }
 
     #project-listing .project {
         overflow: visible !important;
