@@ -8,7 +8,7 @@ get_header(); ?>
 <section class="focus-area services">
 	<div class="container">
 		<h2 class="leading">Are you doing the <span class="yellow">best</span> for your business?</h2>
-		<p class="leading">Complete listing can be found on <a href="http://github.com/srtfisher" target="_blank" rel="self">GitHub</a></p>
+		<p class="leading">We make sure you get the best value for you money.</p>
 	</div>
 </section>
 
