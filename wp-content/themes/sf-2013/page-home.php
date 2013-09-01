@@ -57,7 +57,7 @@
 					<h5><?php echo $domain; ?></h5>
 				</a>
 			</div>
-		<?php endwhile; endif; ?>
+		<?php endwhile; endif; wp_reset_query(); ?>
 		</div>
 	</div>
 

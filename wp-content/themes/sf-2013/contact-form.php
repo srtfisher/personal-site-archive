@@ -1,6 +1,7 @@
 <?php
 if (! defined('MESSAGE_TYPE')) define('MESSAGE_TYPE', 'message');
-if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', false); ?>
+if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', is_page() AND ! is_front_page());
+?>
 <section class="contact" id="contact">
     <div class="container">
         <?php if (! SINGLE_PAGE) : ?>
@@ -25,7 +26,7 @@ if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', false); ?>
             <input type="hidden" name="type" value="message" />
 
             <div class="col-lg-6 col-md-6">
-                <textarea name="content" id="contact-textarea" <?php if (defined('SINGLE_PAGE') AND MESSAGE_TYPE == 'message') echo 'autofocus'; ?> placeholder="What's on your mind?" class="form-control"></textarea>
+                <textarea name="content" id="contact-textarea" <?php if (SINGLE_PAGE AND MESSAGE_TYPE == 'message') echo 'autofocus'; ?> placeholder="What's on your mind?" class="form-control"></textarea>
             </div>
 
             <div class="col-lg-6 col-md-6">
