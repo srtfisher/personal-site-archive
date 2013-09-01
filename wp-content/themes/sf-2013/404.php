@@ -1,17 +1,9 @@
-<?php
-get_header();
-?>
-<section class="blog">
-    <div class="container">
-            <article>
-                <h3 class="article-title four-oh-four-title" align="center">404 File Not Found</h3>
-                
-                <div class="content-wrap">
-                    <p>&nbsp;</p>
-                    <p align="center">Still haven't found what you're looking for? Don't write a song about it &mdash; <a href="<?=home_url()?>">Let's go home!</a></p>
-                </div>
-            </article>
-    </div>
-</section>
-
+<?php get_header(); ?>
+<section class="focus-area">
+	<div class="container">
+		<h2 class="leading">Post not found.</h2>
+		<p class="leading">Visit my blog to find my thoughts. Otherwise, let's go <a href="<?php echo home_url(); ?>">home</a>.</p>
+	</div>
+</div>
+<section class="focus-area"></section>
 <?php get_footer(); ?>
