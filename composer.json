@@ -26,7 +26,7 @@
 		"wpackagist/wp-facebook-open-graph-protocol": "*"
 	},
 	"scripts": {
-		"post-update-cmd": "php on-deploy.php",
-		"post-install-cmd": "php on-deploy.php"
+		//"post-update-cmd": "php on-deploy.php",
+		//"post-install-cmd": "php on-deploy.php"
 	}
 }
