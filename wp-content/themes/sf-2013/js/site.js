@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('#nav-toggle').click(function()
     {
         console.log('click');
-        $('.nav-wrap').slideToggle();
+        $('.nav-wrap').toggle();
     });
 
     $('.btn[data-type]').click(function(e)
