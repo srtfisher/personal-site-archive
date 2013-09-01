@@ -32,7 +32,7 @@
                       </button>
                 </div>
 
-                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 nav-wrap">
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 nav-wrap clearfix">
                     <nav id="site-nav-wrap">
                         <ul id="site-nav">
                             <li id="nav-home" <?php if (is_front_page() ) echo 'class="active"'; ?>><a href="<?=home_url('')?>" data-target="#spotlight">Home</a></li>
