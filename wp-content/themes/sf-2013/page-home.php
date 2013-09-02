@@ -2,11 +2,11 @@
 <section class="focus-area dark home">
 	<div class="container">
 		<h2 class="leading">Hi, my name is <span class="yellow">Sean Fisher</span></h2>
-		<p class="leading">I'm a full stack developer from New York City. My specialties include
+		<p class="leading">I'm a full stack developer from New York City. My specialties include 
 
-		WordPress, web design and custom application
+		WordPress, web design and custom application 
 
-		development. I work with businesses to create incredible
+		development. I work with businesses to create incredible 
 
 		applications.<br /> <strong class="dark">Let me help create your idea today.</strong></p>
 
@@ -112,7 +112,7 @@ $('#nav-contact a, #spotlight-contact').click(function(e)
 	scrollToId('#contact');
 	$('#contact-textarea').focus();
 	
-	_gaq.push(['_trackEvent', 'Button', 'Click', $(this).data('medium')]);
+	_gaq.push(['_trackEvent', 'Button', 'Click', 'Contact '  + $(this).data('medium')]);
 });
 
 $('#nav-work a').click(function(e)
