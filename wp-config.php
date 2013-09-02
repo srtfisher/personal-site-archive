@@ -12,6 +12,7 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 // Custom Content Directory
 // ========================
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
+define( 'WP_PLUGIN_DIR', __DIR__.'/wp-content/plugins' );
 
 if (defined('WP_CLI') AND WP_CLI)
 	define( 'WP_CONTENT_URL', 'http://localhost/wp-content' );
