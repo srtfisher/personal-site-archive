@@ -70,7 +70,7 @@ $(document).ready(function () {
 function scrollToId(id)
 {
     console.log(id);
-    offset = $('#global-header').height() + 10;
+    offset = $('#global-nav').height() + 10;
      $('html,body').animate({
           scrollTop: ( $(id).offset().top)-offset
      },'slow');
