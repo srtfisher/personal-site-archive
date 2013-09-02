@@ -5,6 +5,7 @@
 /database-config.php
 !/composer.json
 !/.git*
+!/deploy.sh
 
 !/wp-content/
 /wp-content/*
