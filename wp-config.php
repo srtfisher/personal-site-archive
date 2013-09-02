@@ -13,6 +13,7 @@ if ( file_exists( dirname( __FILE__ ) . '/local-config.php' ) ) {
 // ========================
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 define( 'WP_PLUGIN_DIR', __DIR__.'/wp-content/plugins' );
+define('DONOTVERIFY_WP_LOADER', true);
 
 if (defined('WP_CLI') AND WP_CLI)
 	define( 'WP_CONTENT_URL', 'http://localhost/wp-content' );
