@@ -1,0 +1,44 @@
+#!/bin/sh
+# Deply seanfisher.co
+info () {
+  printf "  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+user () {
+  printf "\r  [ \033[0;33m?\033[0m ] $1 "
+}
+
+success () {
+  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+fail () {
+  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+  echo ''
+  exit
+}
+info "Starting deployment... \n";
+
+ssh web@seanfisher.co << ENDSSH
+
+cd ~/sf
+git pull
+printf "\n Pulled in latest work \n\n"
+php on-deploy.php
+printf "\n Post deployment called. \n\n"
+
+# Clear cache
+cd wordpress/;
+wp w3-total-cache flush
+printf "\n w3tc cache flushed \n\n"
+
+# Force rebuild of CSS
+cd ../
+rm -rf wp-content/themes/sf-2013/css/site.css
+php index.php >> /dev/null
+printf "\n Debuilt site css \n\n"
+
+# End SSH Connection
+ENDSSH
+
+success "Site deployed."

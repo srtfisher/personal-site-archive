@@ -1,5 +1,5 @@
 /**
- * Sean Fisher 2012
+ * Sean Fisher 2013
  *
 **/
 var SF = {};
@@ -69,14 +69,8 @@ $(document).ready(function () {
 
 function scrollToId(id)
 {
-    console.log(id);
     offset = $('#global-nav').height() + 10;
      $('html,body').animate({
           scrollTop: ( $(id).offset().top)-offset
      },'slow');
 }
-
-SF.resetHeader = function()
-{
-    $('ul#site-nav li.active').removeClass('active');
-};

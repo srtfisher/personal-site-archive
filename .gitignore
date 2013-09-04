@@ -5,7 +5,8 @@
 /database-config.php
 !/composer.json
 !/.git*
-!/deploy.sh
+!/deploy
+!/favicon.png
 
 !/wp-content/
 /wp-content/*

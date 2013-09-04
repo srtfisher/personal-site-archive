@@ -132,6 +132,7 @@ function sf_enqueue()
 {
     wp_register_script('modernizer', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.1/modernizr.min.js', array(), '2.6.1');
     wp_enqueue_script('modernizr');
+    
     // Fix jQuery to load from Google's CDN
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array(), '1.10.2');
@@ -139,7 +140,6 @@ function sf_enqueue()
     // Add our scripts
     wp_register_script( 'bootstrap', get_template_directory_uri().'/js/bootstrap.js', array(), '3.0');
     wp_register_script( 'sf-2013', get_template_directory_uri().'/js/site.js', array(), '2013');
-    //wp_register_script( 'jquery.transit', get_template_directory_uri().'/js/jquery.transit.js', array(), '1.0');
     
     // Enqueue Javascript
     wp_enqueue_script('jquery');
