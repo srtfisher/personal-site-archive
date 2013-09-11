@@ -9,10 +9,9 @@ var SF = {};
 
 $(document).ready(function () {
     $('body').scrollTop(1);
-    
+
     $('#nav-toggle').click(function()
     {
-        console.log('click');
         $('.nav-wrap').toggle();
     });
 
