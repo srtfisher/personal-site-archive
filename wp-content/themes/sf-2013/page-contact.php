@@ -6,7 +6,7 @@
 @define('IS_AJAX', isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest');
 if (IS_AJAX OR isset($_POST['is-robot'])) :
 
-	if (! isset($_POST['is-robot']) AND $_POST['is-robot'] !== 'nope') :
+	if (! isset($_POST['is-robot']) OR $_POST['is-robot'] !== 'nope') :
 	    wp_redirect('/', 301);
 	    exit;
 	endif;
@@ -55,6 +55,8 @@ Any Other Information: %s</p>',
 	);
 		
 	endif;
+	$msg .= '<p>User Agent: '.$_SERVER['HTTP_USER_AGENT']
+		.'<br />IP: '.$_SERVER['REMOTE_ADDR'].'</p>';
 
 	add_filter('wp_mail_content_type',create_function('', 'return "text/html";'));
 	wp_mail('srtfisher+contact@gmail.com', 'Contact Form: '.$_POST['subject'], $msg, [
