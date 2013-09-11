@@ -98,31 +98,7 @@ Have an idea you'd like to see in reality? We'll make it happen. Building out an
 
 <?php 
 add_action('jquery_load', function() {
-?>
-
-if (location.hash == '#work') scrollToId('#work');
-
-$('#nav-contact a, #spotlight-contact').click(function(e)
-{
-	e.preventDefault();
-	scrollToId('#contact');
-	$('#contact-textarea').focus();
-	
-	_gaq.push(['_trackEvent', 'Button', 'Click', 'Contact '  + $(this).data('medium')]);
-});
-
-$('#nav-work a').click(function(e)
-{
-	e.preventDefault();
-	scrollToId('#work');
-});
-
-$('#nav-home a, #nav-logo a').click(function(e)
-{
-	e.preventDefault();
-	scrollToId('body');
-});
-<?php
+?> SF.home(); <?php
 });
 
 get_footer(); ?>

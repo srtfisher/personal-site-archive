@@ -1,11 +1,31 @@
 /**
  * Sean Fisher 2013
- *
 **/
 var SF = {};
-//window.addEventListener("load",function() {
-//    setTimeout(function(){ window.scrollTo(0, 0); }, 0);
-// });
+SF.home = function() {
+    if (location.hash == '#work') scrollToId('#work');
+
+    $('#nav-contact a, #spotlight-contact').click(function(e)
+    {
+        e.preventDefault();
+        scrollToId('#contact');
+        $('#contact-textarea').focus();
+        
+        _gaq.push(['_trackEvent', 'Button', 'Click', 'Contact '  + $(this).data('medium')]);
+    });
+
+    $('#nav-work a').click(function(e)
+    {
+        e.preventDefault();
+        scrollToId('#work');
+    });
+
+    $('#nav-home a, #nav-logo a').click(function(e)
+    {
+        e.preventDefault();
+        scrollToId('body');
+    });
+};
 
 $(document).ready(function () {
     $('body').scrollTop(1);
