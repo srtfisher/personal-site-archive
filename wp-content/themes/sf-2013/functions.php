@@ -47,7 +47,7 @@ add_action('init', function()
 **/
 add_action( 'admin_menu' , function()
 {	
-    add_meta_box('sf_js_box', 'Page\'s Javascript', 'sf_js_box', 'page', 'normal', 'core');
+    // add_meta_box('sf_js_box', 'Page\'s Javascript', 'sf_js_box', 'page', 'normal', 'core');
     add_meta_box('sf_work_box', 'Work Information', function()
 	{
         $image = $image_small = $work = $website = '';

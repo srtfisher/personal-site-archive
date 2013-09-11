@@ -97,5 +97,4 @@ I've built out hundreds of applications and know a thing or two about what works
 	</div>
 </section>
 
-
 <?php get_footer(); ?>
