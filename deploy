@@ -24,6 +24,10 @@ ssh web@seanfisher.co << ENDSSH
 cd ~/sf
 git pull
 printf "\n Pulled in latest work \n\n"
+
+composer update
+printf "\n Updated dependencies \n\n"
+
 php on-deploy.php
 printf "\n Post deployment called. \n\n"
 
