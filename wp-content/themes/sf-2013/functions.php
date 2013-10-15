@@ -158,9 +158,9 @@ function sf_enqueue()
     
 
     if (defined('WP_LOCAL_DEV') AND WP_LOCAL_DEV)
-        $less->compileFile(__DIR__.'/less/edit-style.less', __DIR__.'/css/edit-style.css');
+        $less->compileFile(__DIR__.'/less/editor-style.less', __DIR__.'/css/editor-style.css');
     else
-        $less->checkedCompile(__DIR__.'/less/edit-style.less', __DIR__.'/css/edit-style.css');
+        $less->checkedCompile(__DIR__.'/less/editor-style.less', __DIR__.'/css/editor-style.css');
     
 
     // CSS -- checkedCompile
