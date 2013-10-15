@@ -1,3 +1,30 @@
 @import 'bootstrap.css';
-@import 'site.less';
+
+@import 'variables.less';
+@import 'mixins.less';
+@blue: #049cdb;
+@blueDark: #0064cd;
+@fontserif: 'Cutive', serif;
+@fontsans: 'Open Sans', sans-serif;
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+body {
+    padding-top: 81px;
+    font:14px/1.5 'Helvetica Neue',Helvetica,Arial,sans-serif;
+
+    a {
+        .transition (.25s);
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: @fontsans;
+}
+
+
 @import 'posting.less';
