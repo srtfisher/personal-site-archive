@@ -15,6 +15,8 @@ require(__DIR__.'/vendor/autoload.php');
 // Init Hook
 add_action('init', function()
 {
+    add_editor_style('css/editor-style.css');
+
     register_post_type( 'work',
     array(
         'labels' => array(
@@ -154,6 +156,13 @@ function sf_enqueue()
     else
         $less->checkedCompile(__DIR__.'/less/site.less', __DIR__.'/css/site.css');
     
+
+    if (defined('WP_LOCAL_DEV') AND WP_LOCAL_DEV)
+        $less->compileFile(__DIR__.'/less/edit-style.less', __DIR__.'/css/edit-style.css');
+    else
+        $less->checkedCompile(__DIR__.'/less/edit-style.less', __DIR__.'/css/edit-style.css');
+    
+
     // CSS -- checkedCompile
     wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.css');
     wp_register_style('sf-2013', get_template_directory_uri().'/css/site.css');
