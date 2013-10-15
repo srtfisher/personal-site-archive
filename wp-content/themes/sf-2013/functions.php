@@ -15,7 +15,7 @@ require(__DIR__.'/vendor/autoload.php');
 // Init Hook
 add_action('init', function()
 {
-    add_editor_style('css/editor-style.css');
+    add_editor_style(['css/editor-style.css', 'http://fonts.googleapis.com/css?family=Cutive|Open+Sans:400italic,400,700,300']);
 
     register_post_type( 'work',
     array(
