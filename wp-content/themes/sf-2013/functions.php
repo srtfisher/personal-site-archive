@@ -15,7 +15,7 @@ require(__DIR__.'/vendor/autoload.php');
 // Init Hook
 add_action('init', function()
 {
-    add_editor_style('css/editor-style.css');
+    //add_editor_style('css/editor-style.css');
 
     register_post_type( 'work',
     array(
