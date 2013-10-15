@@ -36,6 +36,9 @@ cd wordpress/;
 wp w3-total-cache flush
 printf "\n w3tc cache flushed \n\n"
 
+php -r "apc_clear_cache('system');"
+printf "\n Cleared APC cache \n\n"
+
 # Force rebuild of CSS
 cd ../
 rm -rf wp-content/themes/sf-2013/css/site.css
