@@ -47,7 +47,7 @@ get_header(); ?>
 			<div class="col-lg-4 col-md-4 col-sm-4">
 				<h3 class="leading">We'll handle all of the grunt work so you don't have to.</h3>
 				<p class="section-info">
-Our years of experience don't go unused. To ensure your product is the best it can be, I can work with you to build an amazing solution customized just for you. From a business website to a custom build application, the sky is the limit.
+Our years of experience don't go unused. To ensure your product is the best it can be, we can work with you to build an amazing solution customized just for you. From a business website to a custom build application, the sky is the limit.
 				</p>
 
 				<p class="section-info">
