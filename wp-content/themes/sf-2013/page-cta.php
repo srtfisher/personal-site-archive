@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Page w/ CTA
+ *
+**/
+
+get_header(); ?>
 <section class="blog">
     <div class="container">
         <?php if (have_posts()) : while(have_posts() ) : the_post(); ?>
