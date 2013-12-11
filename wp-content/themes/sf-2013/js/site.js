@@ -57,17 +57,20 @@ $(document).ready(function () {
     $('form.contact-form').submit(function(e)
     {
         e.preventDefault();
-        
+        btn = $(this).find('button.btn');
+        btn.button('loading');
+
         $('#contact-error').hide();
-        $('#is-robot').val('nope');
+        $(this).find('input[name="is-robot"]').val('nope');
+
         var Data = $(this).serialize(),
             email = $(this).find('input[name="email"]').val();
 
         $.post('/contact/', Data, function(j)
         {
-            
             if (j.status == 'ok')
             {
+                $('.alt-btns').hide();
                 $('form.contact-form').slideUp();
                 $('#contact-sent').fadeIn();
 
@@ -75,6 +78,7 @@ $(document).ready(function () {
             }
             else
             {
+                btn.button('reset');
                 $('#contact-error').fadeIn();
             }
         }, 'json');

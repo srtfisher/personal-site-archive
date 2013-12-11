@@ -22,7 +22,7 @@ if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', is_page() AND ! is_front_pag
         </div>
 
         <div class="row">
-        <form action="/contact" method="POST" class="contact-form" data-form-type="message" enctype="multipart/form-data" <?php if (MESSAGE_TYPE !== 'message') echo'style="display:none;"'; ?>>
+        <form action="<?php echo home_url('contact'); ?>" method="POST" class="contact-form" data-form-type="message" enctype="multipart/form-data" <?php if (MESSAGE_TYPE !== 'message') echo'style="display:none;"'; ?>>
             <input type="hidden" name="type" value="message" />
 
             <div class="col-lg-6 col-md-6">
@@ -38,7 +38,7 @@ if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', is_page() AND ! is_front_pag
 
                     <button type="submit" class="btn btn-large btn-primary btn-block" id="contact-btn"
                 data-placement="top" data-content="I will not help wire money to your account, need SEO services, or want to rule the world. Thank you!"
-                data-title="Before you waste your time!" data-trigger="hover">Send Your Message</button>
+                data-title="Before you waste your time!" data-trigger="hover" data-loading-text="Sending...">Send Your Message</button>
             </div>
             
             
@@ -46,7 +46,7 @@ if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', is_page() AND ! is_front_pag
         </form>
         </div>
         
-        <form action="/contact" method="POST" class="contact-form" data-form-type="project" enctype="multipart/form-data" <?php if (MESSAGE_TYPE !== 'project') echo'style="display:none;"'; ?>>
+        <form action="<?php echo home_url('contact'); ?>" method="POST" class="contact-form" data-form-type="project" enctype="multipart/form-data" <?php if (MESSAGE_TYPE !== 'project') echo'style="display:none;"'; ?>>
             <input type="hidden" name="type" value="project" />
             <input type="hidden" name="is-robot" id="is-robot" value="yes" />
 
@@ -94,7 +94,7 @@ if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', is_page() AND ! is_front_pag
                         <textarea required name="any-other-information" id="any-other-information" class="form-control"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-large btn-primary btn-block">Send Your Project</button>
+                    <button type="submit" class="btn btn-large btn-primary btn-block" data-loading-text="Sending...">Send Your Project</button>
                 </div>
             </div>
         </form>

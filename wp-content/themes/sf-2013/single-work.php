@@ -37,12 +37,12 @@ the_post();
     
     <div class="container footer-container">
         <div class="row">
-            <div class="col-lg-7 col-md-7 col-sm-7">
+            <div class="col-sm-8">
                 <h3>Like what you're seeing?</h3>
-                <p class="lead">I enjoy building amazing products and I would love to work with you.</p>
+                <p class="lead">I create amazing solutions and I would love to work with you.</p>
             </div>
             
-            <div class="col-lg-4 col-md-4 col-sm-4 col-lg-push-1 col-md-push-1 col-sm-push-1">
+            <div class="col-sm-4">
                 <a class="btn btn-primary btn-large" href="<?=home_url()?>/contact//?utm_source=seanfisherco&utm_medium=cta-button&utm_content=single-work-start-project&utm_campaign=contact&project">Start Your Project</a>
             </div>
         </div>

@@ -45,9 +45,8 @@
 			<?php $cellCount = 0;
 			endif; ?>
 			<div class="col-lg-6 col-md-6 col-sm-6 work-piece">
-				<a href="<?php the_permalink(); ?>">
-					<!--<img src="http://placehold.it/460x200" style="max-width:100%;" /> -->
-					<img src="<?php echo home_url().'/wp-content/themes/sf-2013/timthumb.php?src='.urlencode(get_post_meta(get_the_ID(), 'sf-image-small', TRUE)).'&w=460&h=200&a=t'; ?>" style="max-width:100%;" />
+				<a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>">
+					<img src="<?php echo home_url().'/wp-content/themes/sf-2013/timthumb.php?src='.urlencode(get_post_meta(get_the_ID(), 'sf-image-small', TRUE)).'&w=920&h=400&a=t'; ?>" style="max-width:100%;" width="460" />
 
 					<h3><?php the_title(); ?></h3>
 					<h5><?php echo $domain; ?></h5>

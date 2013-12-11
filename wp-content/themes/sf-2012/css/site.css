@@ -377,16 +377,15 @@ section.contact {
   background:#f5f5f5;
   border-bottom:1px solid rgba(0,0,0,0.247059);
 }
-section.contact div.alert {
-  -webkit-border-radius:0;
-  -moz-border-radius:0;
-  border-radius:0;
-  border-left:none;
-  border-right:none;
-}
-section.contact div.alert p {
-  margin:10px 0;
-  font-size:15px;
+section.contact .contact-alert {
+  text-align:center;
+  width:50%;
+  background:whiteSmoke;
+  border:1px solid #dddddd;
+  box-shadow:0 0 9px -4px rgba(0,0,0,0.76), inset 0 0 0px 1px #ffffff;
+  font-family:;
+  padding:20px;
+  margin:40px auto;
 }
 section.contact form { padding:20px 0; }
 section.contact form textarea {

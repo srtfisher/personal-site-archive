@@ -23,6 +23,14 @@ section.single-work {
     div.work-sidebar {
         border-left: 1px solid #ddd;
         padding-left: 22px;
+
+        p {
+            font-family: @fontsans;
+            margin: 1em 0;
+            color: #474747;
+            font-size: 14px;
+            line-height: 25px;
+        }
     }
     
     div.work-featured {
@@ -49,9 +57,11 @@ section.single-work {
         }
         
         p {
-            font-size: 15px;
+            font-family: @fontsans;
             margin: 1em 0;
-            line-height: 20px;
+            color: #474747;
+            font-size: 16px;
+            line-height: 27px;
         }
     }
     
@@ -60,17 +70,13 @@ section.single-work {
         border-top: 1px solid #ddd;
         margin-top: 30px;
         padding-top: 20px;
-        font-family: @fontsans;
         
         h3 {
-            font-weight: bold;
-            font-size: 26px;
-            margin-bottom: 0;
+            font: 600 26px/30px @fontsans;
         }
         
-        p {
-            font-size: 18px;
-            line-height: 25px;
+        p.lead {
+            font: 300 18px/25px @fontsans;
         }
         
         .btn.btn-primary {
