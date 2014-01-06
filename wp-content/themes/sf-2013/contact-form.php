@@ -52,6 +52,13 @@ if (! defined('SINGLE_PAGE')) define('SINGLE_PAGE', is_page() AND ! is_front_pag
 
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-lg-push-2 col-md-push-2 col-sm-push-2" class="project-messages">
+
+                    <?php if (date('Y') <= 2014 AND date('n') <= 3) : ?>
+                    <div class="contact-alert" style="width:80%;">
+                        I'm currently accepting work for Spring 2014 — would love to hear from you.
+                    </div>
+                    <?php endif; ?>
+
                     <div class="form-group">
                         <label for="your-name">Your Name</label>
                         <input required type="text" name="your-name" id="your-name" placeholder="What's your name?" class="form-control name" <?php if (defined('SINGLE_PAGE') AND MESSAGE_TYPE == 'project') echo 'autofocus'; ?> />
